@@ -1,0 +1,78 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Book {
+  id              Int     @id @default(autoincrement())
+  title           String  @unique @db.VarChar(10240)
+  publicationYear Int
+  summary         String? @db.Text
+  publisher       String? @db.VarChar(2000)
+
+  authors  BookAuthor[]
+  genres   BookGenre[]
+  editions Edition[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([title, publicationYear])
+}
+
+model Author {
+  id    Int          @id @default(autoincrement())
+  name  String       @unique @db.VarChar(2000)
+  books BookAuthor[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model BookAuthor {
+  book     Book   @relation(fields: [bookId], references: [id], onDelete: Cascade)
+  bookId   Int
+  author   Author @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  authorId Int
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@id([bookId, authorId])
+}
+
+model Genre {
+  id    Int         @id @default(autoincrement())
+  name  String      @unique @db.VarChar(1000)
+  books BookGenre[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model BookGenre {
+  book    Book  @relation(fields: [bookId], references: [id], onDelete: Cascade)
+  bookId  Int
+  genre   Genre @relation(fields: [genreId], references: [id], onDelete: Cascade)
+  genreId Int
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@id([bookId, genreId])
+}
+
+model Edition {
+  id     Int    @id @default(autoincrement())
+  value  String @db.VarChar(1000)
+  isbn   String @unique @db.VarChar(255)
+  book   Book   @relation(fields: [bookId], references: [id], onDelete: Cascade)
+  bookId Int
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

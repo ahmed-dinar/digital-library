@@ -1,0 +1,1072 @@
+[
+  {
+    "title": "1984",
+    "isbn": "978-0-452-28423-4",
+    "author": "George Orwell",
+    "publicationYear": 1949,
+    "summary": "A dystopian novel depicting a totalitarian society ruled by the Party and its leader Big Brother.",
+    "genre": "Dystopian Fiction",
+    "publisher": "Secker & Warburg"
+  },
+  {
+    "title": "To Kill a Mockingbird",
+    "isbn": "978-0-06-112008-4",
+    "author": "Harper Lee",
+    "publicationYear": 1960,
+    "summary": "A novel exploring racial injustice and moral growth in the American South during the 1930s.",
+    "genre": "Fiction",
+    "publisher": "J.B. Lippincott & Co."
+  },
+  {
+    "title": "One Hundred Years of Solitude",
+    "isbn": "978-0-06-088328-7",
+    "author": "Gabriel García Márquez",
+    "publicationYear": 1967,
+    "summary": "A landmark novel following the Buendía family through generations in the fictional town of Macondo.",
+    "genre": "Magical Realism",
+    "publisher": "Editorial Sudamericana"
+  },
+  {
+    "title": "The Catcher in the Rye",
+    "isbn": "978-0-316-76948-0",
+    "author": "J.D. Salinger",
+    "publicationYear": 1951,
+    "summary": "A coming-of-age novel narrated by Holden Caulfield, a disenchanted teenager wandering through New York City.",
+    "genre": "Fiction",
+    "publisher": "Little, Brown and Company"
+  },
+  {
+    "title": "Brave New World",
+    "isbn": "978-0-06-085052-4",
+    "author": "Aldous Huxley",
+    "publicationYear": 1932,
+    "summary": "A dystopian novel depicting a future society where people are engineered for specific roles and controlled through pleasure.",
+    "genre": "Dystopian Fiction",
+    "publisher": "Chatto & Windus"
+  },
+  {
+    "title": "The Great Gatsby",
+    "isbn": "978-0-7432-7356-5",
+    "author": "F. Scott Fitzgerald",
+    "publicationYear": 1925,
+    "summary": "A novel set in the Roaring Twenties, exploring the American Dream, wealth, and social class.",
+    "genre": "Fiction",
+    "publisher": "Charles Scribner's Sons"
+  },
+  {
+    "title": "The Hitchhiker's Guide to the Galaxy",
+    "isbn": "978-0-345-39181-3",
+    "author": "Douglas Adams",
+    "publicationYear": 1979,
+    "summary": "A comedic science fiction series following the misadventures of Arthur Dent after Earth's destruction.",
+    "genre": "Science Fiction",
+    "publisher": "Pan Books"
+  },
+  {
+    "title": "Wuthering Heights",
+    "isbn": "978-0-14-143955-9",
+    "author": "Emily Brontë",
+    "publicationYear": 1847,
+    "summary": "A Gothic novel exploring love, revenge, and the supernatural on the Yorkshire moors.",
+    "genre": "Gothic Fiction",
+    "publisher": "Thomas Cautley Newby"
+  },
+  {
+    "title": "The Sun Also Rises",
+    "isbn": "978-0-684-80146-9",
+    "author": "Ernest Hemingway",
+    "publicationYear": 1926,
+    "summary": "A novel capturing the disillusionment and aimlessness of the 'Lost Generation' after World War I.",
+    "genre": "Fiction",
+    "publisher": "Scribner"
+  },
+  {
+    "title": "Anna Karenina",
+    "isbn": "978-0-14-303500-8",
+    "author": "Leo Tolstoy",
+    "publicationYear": 1877,
+    "summary": "A novel exploring themes of love, infidelity, and societal expectations in imperial Russia.",
+    "genre": "Realist Fiction",
+    "publisher": "The Russian Messenger"
+  },
+  {
+    "title": "The Brothers Karamazov",
+    "isbn": "978-0-14-044924-6",
+    "author": "Fyodor Dostoevsky",
+    "publicationYear": 1880,
+    "summary": "A philosophical novel exploring the complexities of faith, morality, and family relationships.",
+    "genre": "Philosophical Fiction",
+    "publisher": "The Russian Messenger"
+  },
+  {
+    "title": "The Metamorphosis",
+    "isbn": "978-0-451-52716-1",
+    "author": "Franz Kafka",
+    "publicationYear": 1915,
+    "summary": "A novella telling the bizarre story of Gregor Samsa, who wakes up one day transformed into a giant insect.",
+    "genre": "Absurdist Fiction",
+    "publisher": "Kurt Wolff Verlag"
+  },
+  {
+    "title": "The Joy of Cooking",
+    "isbn": "978-0-452-26009-2",
+    "author": "Irma S. Rombauer",
+    "publicationYear": 1931,
+    "summary": "A classic cookbook providing a wide range of recipes and culinary advice for home cooks.",
+    "genre": "Cookbook",
+    "publisher": "Bobbs-Merrill Company"
+  },
+  {
+    "title": "The Princess Bride",
+    "isbn": "978-0-345-41893-4",
+    "author": "William Goldman",
+    "publicationYear": 1973,
+    "summary": "A fantasy novel with elements of romance, adventure, and humor, featuring Princess Buttercup and her true love Westley.",
+    "genre": "Fantasy",
+    "publisher": "Harcourt Brace Jovanovich"
+  },
+  {
+    "title": "The Stand",
+    "isbn": "978-0-385-12168-2",
+    "author": "Stephen King",
+    "publicationYear": 1978,
+    "summary": "A post-apocalyptic horror novel depicting the battle between good and evil after a deadly pandemic wipes out most of humanity.",
+    "genre": "Horror",
+    "publisher": "Doubleday"
+  },
+  {
+    "title": "The Art of War",
+    "isbn": "978-0-19-501476-1",
+    "author": "Sun Tzu",
+    "publicationYear": -500,
+    "summary": "An ancient Chinese treatise on military strategy and tactics.",
+    "genre": "Military Strategy",
+    "publisher": "Oxford University Press"
+  },
+  {
+    "title": "The Silmarillion",
+    "isbn": "978-0-547-32581-5",
+    "author": "J.R.R. Tolkien",
+    "publicationYear": 1977,
+    "summary": "A collection of mythopoeic stories set in Tolkien's Middle-earth, exploring the history and cosmology of the world.",
+    "genre": "Fantasy",
+    "publisher": "George Allen & Unwin"
+  },
+  {
+    "title": "The Handmaid's Tale",
+    "isbn": "978-0-385-49081-8",
+    "author": "Margaret Atwood",
+    "publicationYear": 1985,
+    "summary": "A dystopian novel exploring a totalitarian society where women are subjugated and used for reproductive purposes.",
+    "genre": "Dystopian Fiction",
+    "publisher": "McClelland and Stewart"
+  },
+  {
+    "title": "The Big Sleep",
+    "isbn": "978-0-394-75783-3",
+    "author": "Raymond Chandler",
+    "publicationYear": 1939,
+    "summary": "A classic hardboiled detective novel featuring private investigator Philip Marlowe and a complex web of crime and intrigue.",
+    "genre": "Mystery",
+    "publisher": "Alfred A. Knopf"
+  },
+  {
+    "title": "The Power of Now",
+    "isbn": "978-1-57731-152-2",
+    "author": "Eckhart Tolle",
+    "publicationYear": 1997,
+    "summary": "A spiritual guidebook emphasizing the importance of living in the present moment.",
+    "genre": "Spirituality",
+    "publisher": "New World Library"
+  },
+  {
+    "title": "The Fifth Season",
+    "isbn": "978-0-316-22929-6",
+    "author": "N.K. Jemisin",
+    "publicationYear": 2015,
+    "summary": "The first book in the Broken Earth trilogy, a fantasy series exploring a world plagued by seismic instability and oppression.",
+    "genre": "Fantasy",
+    "publisher": "Orbit"
+  },
+  {
+    "title": "Pride and Prejudice",
+    "isbn": "978-0-14-143951-1",
+    "author": "Jane Austen",
+    "publicationYear": 1813,
+    "summary": "A classic novel exploring themes of love, class, and manners in early 19th-century England.",
+    "genre": "Romantic Fiction",
+    "publisher": "Thomas Egerton"
+  },
+  {
+    "title": "Moby-Dick",
+    "isbn": "978-0-14-243724-7",
+    "author": "Herman Melville",
+    "publicationYear": 1851,
+    "summary": "An epic novel about Captain Ahab's obsessive quest for revenge against the white whale, Moby-Dick.",
+    "genre": "Adventure",
+    "publisher": "Richard Bentley"
+  },
+  {
+    "title": "The Hobbit",
+    "isbn": "978-0-618-71422-4",
+    "author": "J.R.R. Tolkien",
+    "publicationYear": 1937,
+    "summary": "A fantasy novel following the journey of Bilbo Baggins as he accompanies a group of dwarves to reclaim their homeland.",
+    "genre": "Fantasy",
+    "publisher": "George Allen & Unwin"
+  },
+  {
+    "title": "Crime and Punishment",
+    "isbn": "978-0-14-044913-0",
+    "author": "Fyodor Dostoevsky",
+    "publicationYear": 1866,
+    "summary": "A psychological novel exploring the moral dilemmas of Rodion Raskolnikov, a former student turned murderer.",
+    "genre": "Psychological Fiction",
+    "publisher": "The Russian Messenger"
+  },
+  {
+    "title": "The Shining",
+    "isbn": "978-0-385-12167-5",
+    "author": "Stephen King",
+    "publicationYear": 1977,
+    "summary": "A horror novel depicting the descent into madness of Jack Torrance, a winter caretaker at the haunted Overlook Hotel.",
+    "genre": "Horror",
+    "publisher": "Doubleday"
+  },
+  {
+    "title": "The Odyssey",
+    "isbn": "978-0-14-026886-7",
+    "author": "Homer",
+    "publicationYear": -700,
+    "summary": "An epic poem telling the adventures of Odysseus as he tries to return home after the Trojan War.",
+    "genre": "Epic Poetry",
+    "publisher": "Penguin Classics"
+  },
+  {
+    "title": "The Kite Runner",
+    "isbn": "978-1-59463-193-1",
+    "author": "Khaled Hosseini",
+    "publicationYear": 2003,
+    "summary": "A novel exploring themes of guilt, redemption, and the impact of personal choices in Afghanistan.",
+    "genre": "Fiction",
+    "publisher": "Riverhead Books"
+  },
+  {
+    "title": "The Picture of Dorian Gray",
+    "isbn": "978-0-19-953598-9",
+    "author": "Oscar Wilde",
+    "publicationYear": 1890,
+    "summary": "A philosophical novel about the consequences of a man's immoral actions as seen through a portrait that ages while he remains youthful.",
+    "genre": "Gothic Fiction",
+    "publisher": "Ward, Lock & Company"
+  },
+  {
+    "title": "The Stranger",
+    "isbn": "978-0-679-72020-1",
+    "author": "Albert Camus",
+    "publicationYear": 1942,
+    "summary": "An existentialist novel exploring the detached and indifferent nature of its protagonist, Meursault.",
+    "genre": "Philosophical Fiction",
+    "publisher": "Gallimard"
+  },
+  {
+    "title": "The Road Less Traveled",
+    "isbn": "978-0-7432-8504-2",
+    "author": "M. Scott Peck",
+    "publicationYear": 1978,
+    "summary": "A self-help book exploring spiritual growth, love, and the importance of discipline.",
+    "genre": "Self-Help",
+    "publisher": "Simon & Schuster"
+  },
+  {
+    "title": "The Three Musketeers",
+    "isbn": "978-0-553-21152-1",
+    "author": "Alexandre Dumas",
+    "publicationYear": 1844,
+    "summary": "An adventure novel following the escapades of d'Artagnan and his three musketeer friends in 17th-century France.",
+    "genre": "Adventure",
+    "publisher": "Baudry's European Library"
+  },
+  {
+    "title": "The Bell Jar",
+    "isbn": "978-0-06-083702-0",
+    "author": "Sylvia Plath",
+    "publicationYear": 1963,
+    "summary": "A semi-autobiographical novel exploring the descent into mental illness of its protagonist, Esther Greenwood.",
+    "genre": "Fiction",
+    "publisher": "Heinemann"
+  },
+  {
+    "title": "The Da Vinci Code",
+    "isbn": "978-0-307-27786-0",
+    "author": "Dan Brown",
+    "publicationYear": 2003,
+    "summary": "A mystery thriller involving symbology, religion, and hidden secrets.",
+    "genre": "Mystery",
+    "publisher": "Doubleday"
+  },
+  {
+    "title": "The Wind in the Willows",
+    "isbn": "978-0-14-303909-9",
+    "author": "Kenneth Grahame",
+    "publicationYear": 1908,
+    "summary": "A classic children's novel following the adventures of anthropomorphic animals in the English countryside.",
+    "genre": "Children's Literature",
+    "publisher": "Methuen & Co."
+  },
+  {
+    "title": "The Girl with the Dragon Tattoo",
+    "isbn": "978-0-307-27572-9",
+    "author": "Stieg Larsson",
+    "publicationYear": 2005,
+    "summary": "A mystery thriller featuring journalist Mikael Blomkvist and hacker Lisbeth Salander as they investigate a wealthy family's dark secrets.",
+    "genre": "Mystery",
+    "publisher": "Norstedts Förlag"
+  },
+  {
+    "title": "The Martian",
+    "isbn": "978-0-553-41802-6",
+    "author": "Andy Weir",
+    "publicationYear": 2011,
+    "summary": "A science fiction novel following astronaut Mark Watney's struggle for survival on Mars after being left behind by his crew.",
+    "genre": "Science Fiction",
+    "publisher": "Crown Publishing Group"
+  },
+  {
+    "title": "The Road",
+    "isbn": "978-0-307-26665-0",
+    "author": "Cormac McCarthy",
+    "publicationYear": 2006,
+    "summary": "A post-apocalyptic novel following a father and son's journey through a desolate landscape.",
+    "genre": "Fiction",
+    "publisher": "Alfred A. Knopf"
+  },
+  {
+    "title": "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe",
+    "isbn": "978-0-06-023481-2",
+    "author": "C.S. Lewis",
+    "publicationYear": 1950,
+    "summary": "A fantasy novel featuring the magical land of Narnia and the battle between good and evil.",
+    "genre": "Fantasy",
+    "publisher": "Geoffrey Bles"
+  },
+  {
+    "title": "The Girl on the Train",
+    "isbn": "978-1-59463-366-9",
+    "author": "Paula Hawkins",
+    "publicationYear": 2015,
+    "summary": "A psychological thriller following the intertwined lives of three women and the mysteries they uncover.",
+    "genre": "Thriller",
+    "publisher": "Riverhead Books"
+  },
+  {
+    "title": "The Count of Monte Cristo",
+    "isbn": "978-1-59308-390-7",
+    "author": "Alexandre Dumas",
+    "publicationYear": 1844,
+    "summary": "An adventure novel of revenge and redemption, following Edmond Dantès' quest for justice.",
+    "genre": "Adventure",
+    "publisher": "Penguin Classics"
+  },
+  {
+    "title": "The Joy Luck Club",
+    "isbn": "978-0-14-303809-2",
+    "author": "Amy Tan",
+    "publicationYear": 1989,
+    "summary": "A novel exploring the relationships between Chinese-American immigrant mothers and their American-born daughters.",
+    "genre": "Fiction",
+    "publisher": "G.P. Putnam's Sons"
+  },
+  {
+    "title": "The Grapes of Wrath",
+    "isbn": "978-0-14-303943-3",
+    "author": "John Steinbeck",
+    "publicationYear": 1939,
+    "summary": "A novel depicting the struggles of the Joad family during the Great Depression's Dust Bowl era.",
+    "genre": "Fiction",
+    "publisher": "The Viking Press"
+  },
+  {
+    "title": "The Hunt for Red October",
+    "isbn": "978-0-87021-285-7",
+    "author": "Tom Clancy",
+    "publicationYear": 1984,
+    "summary": "A techno-thriller following CIA analyst Jack Ryan as he tries to prevent a Soviet submarine captain from defecting.",
+    "genre": "Thriller",
+    "publisher": "Naval Institute Press"
+  },
+  {
+    "title": "The Secret Garden",
+    "isbn": "978-0-553-21462-1",
+    "author": "Frances Hodgson Burnett",
+    "publicationYear": 1911,
+    "summary": "A children's novel about the healing power of nature and the transformative magic of a hidden garden.",
+    "genre": "Children's Literature",
+    "publisher": "Frederick Warne & Co."
+  },
+  {
+    "title": "The Silence of the Lambs",
+    "isbn": "978-0-312-25343-7",
+    "author": "Thomas Harris",
+    "publicationYear": 1988,
+    "summary": "A psychological horror novel featuring FBI agent Clarice Starling and the brilliant but insane Dr. Hannibal Lecter.",
+    "genre": "Horror",
+    "publisher": "St. Martin's Press"
+  },
+  {
+    "title": "The Divine Comedy",
+    "isbn": "978-0-14-044479-1",
+    "author": "Dante Alighieri",
+    "publicationYear": 1320,
+    "summary": "An epic poem depicting the journey of the soul through Hell, Purgatory, and Paradise.",
+    "genre": "Epic Poetry",
+    "publisher": "Folengo"
+  },
+  {
+    "title": "The Jungle Book",
+    "isbn": "978-1-85326-209-6",
+    "author": "Rudyard Kipling",
+    "publicationYear": 1894,
+    "summary": "A collection of stories about Mowgli, a boy raised by wolves, and his adventures in the Indian jungle.",
+    "genre": "Children's Literature",
+    "publisher": "Macmillan Publishers"
+  },
+  {
+    "title": "The Hunger Games",
+    "isbn": "978-0-439-02348-1",
+    "author": "Suzanne Collins",
+    "publicationYear": 2008,
+    "summary": "A dystopian novel set in a future where young people are selected to participate in a televised fight to the death.",
+    "genre": "Dystopian Fiction",
+    "publisher": "Scholastic Corporation"
+  },
+  {
+    "title": "The Hound of the Baskervilles",
+    "isbn": "978-0-19-282561-8",
+    "author": "Arthur Conan Doyle",
+    "publicationYear": 1902,
+    "summary": "A mystery novel featuring detective Sherlock Holmes and Dr. John Watson as they investigate a supernatural hound on the moors.",
+    "genre": "Mystery",
+    "publisher": "George Newnes"
+  },
+  {
+    "title": "The War of the Worlds",
+    "isbn": "978-0-486-26862-7",
+    "author": "H.G. Wells",
+    "publicationYear": 1897,
+    "summary": "A science fiction novel depicting a Martian invasion of Earth and the ensuing struggle for survival.",
+    "genre": "Science Fiction",
+    "publisher": "William Heinemann"
+  },
+  {
+    "title": "The Color Purple",
+    "isbn": "978-0-671-73480-9",
+    "author": "Alice Walker",
+    "publicationYear": 1982,
+    "summary": "A novel exploring the hardships and triumphs of African American women in the early 20th century.",
+    "genre": "Fiction",
+    "publisher": "Harcourt Brace Jovanovich"
+  },
+  {
+    "title": "The Lord of the Flies",
+    "isbn": "978-0-399-26403-5",
+    "author": "William Golding",
+    "publicationYear": 1954,
+    "summary": "A novel exploring the descent into savagery of a group of boys stranded on a deserted island.",
+    "genre": "Allegorical Fiction",
+    "publisher": "Faber and Faber"
+  },
+  {
+    "title": "The Shadow of the Wind",
+    "isbn": "978-0-14-303490-1",
+    "author": "Carlos Ruiz Zafón",
+    "publicationYear": 2001,
+    "summary": "A mystery novel set in post-World War II Barcelona, involving a young boy discovering a forgotten author's works.",
+    "genre": "Mystery",
+    "publisher": "Penguin Books"
+  },
+  {
+    "title": "The Girl with All the Gifts",
+    "isbn": "978-0-316-24156-7",
+    "author": "M.R. Carey",
+    "publicationYear": 2014,
+    "summary": "A science fiction thriller set in a dystopian future where a fungal infection turns people into zombie-like creatures.",
+    "genre": "Science Fiction",
+    "publisher": "Orbit"
+  },
+  {
+    "title": "The Outsiders",
+    "isbn": "978-0-14-038572-4",
+    "author": "S.E. Hinton",
+    "publicationYear": 1967,
+    "summary": "A coming-of-age novel exploring the rivalry between two groups of teenagers from different socioeconomic backgrounds.",
+    "genre": "Young Adult Fiction",
+    "publisher": "Viking Press"
+  },
+  {
+    "title": "The Alchemist",
+    "isbn": "978-0-06-112241-5",
+    "author": "Paulo Coelho",
+    "publicationYear": 1988,
+    "summary": "A philosophical novel following Santiago, a young shepherd, on his quest to discover his personal legend.",
+    "genre": "Philosophical Fiction",
+    "publisher": "Harper & Row"
+  },
+  {
+    "title": "The Master and Margarita",
+    "isbn": "978-0-14-118014-4",
+    "author": "Mikhail Bulgakov",
+    "publicationYear": 1966,
+    "summary": "A satirical novel involving the Devil's visit to Moscow, intertwining supernatural elements with political critique.",
+    "genre": "Satire",
+    "publisher": "Yale University Press"
+  },
+  {
+    "title": "The Left Hand of Darkness",
+    "isbn": "978-0-441-78303-5",
+    "author": "Ursula K. Le Guin",
+    "publicationYear": 1969,
+    "summary": "A science fiction novel exploring gender and identity on the planet Gethen, where inhabitants can change sex at will.",
+    "genre": "Science Fiction",
+    "publisher": "Ace Books"
+  },
+  {
+    "title": "The Bourne Identity",
+    "isbn": "978-0-553-25538-7",
+    "author": "Robert Ludlum",
+    "publicationYear": 1980,
+    "summary": "A thriller following an amnesiac man, Jason Bourne, as he discovers his identity and becomes entangled in a conspiracy.",
+    "genre": "Thriller",
+    "publisher": "Richard Marek Publishers"
+  },
+  {
+    "title": "The Adventures of Sherlock Holmes",
+    "isbn": "978-0-14-043908-8",
+    "author": "Arthur Conan Doyle",
+    "publicationYear": 1892,
+    "summary": "A collection of short stories featuring the detective Sherlock Holmes and his friend Dr. John Watson.",
+    "genre": "Mystery",
+    "publisher": "George Newnes"
+  },
+  {
+    "title": "The Fault in Our Stars",
+    "isbn": "978-0-525-47881-2",
+    "author": "John Green",
+    "publicationYear": 2012,
+    "summary": "A young adult novel about two teenagers with cancer who fall in love and embark on a journey of self-discovery.",
+    "genre": "Young Adult Fiction",
+    "publisher": "Dutton Books"
+  },
+  {
+    "title": "The Old Man and the Sea",
+    "isbn": "978-0-451-20859-4",
+    "author": "Ernest Hemingway",
+    "publicationYear": 1952,
+    "summary": "A novella telling the story of an aging Cuban fisherman, Santiago, and his epic struggle with a giant marlin.",
+    "genre": "Novella",
+    "publisher": "Charles Scribner's Sons"
+  },
+  {
+    "title": "The Iliad",
+    "isbn": "978-0-19-953679-5",
+    "author": "Homer",
+    "publicationYear": -700,
+    "summary": "An ancient Greek epic poem depicting the Trojan War and the hero Achilles' wrath.",
+    "genre": "Epic Poetry",
+    "publisher": "Penguin Classics"
+  },
+  {
+    "title": "The Godfather",
+    "isbn": "978-0-451-16397-3",
+    "author": "Mario Puzo",
+    "publicationYear": 1969,
+    "summary": "A crime novel following the Corleone family and their patriarch, Vito Corleone, in the world of organized crime.",
+    "genre": "Crime Fiction",
+    "publisher": "G.P. Putnam's Sons"
+  },
+  {
+    "title": "The War of the End of the World",
+    "isbn": "978-0-14-118128-8",
+    "author": "Mario Vargas Llosa",
+    "publicationYear": 1981,
+    "summary": "A historical novel set in 19th-century Brazil, exploring social and political upheaval.",
+    "genre": "Historical Fiction",
+    "publisher": "Faber and Faber"
+  },
+  {
+    "title": "The Chronicles of Narnia: Prince Caspian",
+    "isbn": "978-0-06-076495-9",
+    "author": "C.S. Lewis",
+    "publicationYear": 1951,
+    "summary": "A fantasy novel continuing the adventures of the Pevensie siblings in the magical land of Narnia.",
+    "genre": "Fantasy",
+    "publisher": "Geoffrey Bles"
+  },
+  {
+    "title": "The Maltese Falcon",
+    "isbn": "978-0-679-72261-8",
+    "author": "Dashiell Hammett",
+    "publicationYear": 1930,
+    "summary": "A classic detective novel featuring private investigator Sam Spade and the search for a valuable statuette.",
+    "genre": "Mystery",
+    "publisher": "Alfred A. Knopf"
+  },
+  {
+    "title": "The Scarlet Letter",
+    "isbn": "978-0-14-243726-1",
+    "author": "Nathaniel Hawthorne",
+    "publicationYear": 1850,
+    "summary": "A novel exploring the consequences of adultery and shame in 17th-century Puritan Massachusetts.",
+    "genre": "Historical Fiction",
+    "publisher": "Ticknor, Reed & Fields"
+  },
+  {
+    "title": "The Pillars of the Earth",
+    "isbn": "978-0-451-21308-6",
+    "author": "Ken Follett",
+    "publicationYear": 1989,
+    "summary": "A historical novel set in 12th-century England, depicting the construction of a cathedral and the lives of those involved.",
+    "genre": "Historical Fiction",
+    "publisher": "William Morrow and Company"
+  },
+  {
+    "title": "The Girl Who Played with Fire",
+    "isbn": "978-0-307-27874-4",
+    "author": "Stieg Larsson",
+    "publicationYear": 2006,
+    "summary": "A mystery thriller continuing the story of journalist Mikael Blomkvist and hacker Lisbeth Salander.",
+    "genre": "Mystery",
+    "publisher": "Norstedts Förlag"
+  },
+  {
+    "title": "The Man in the High Castle",
+    "isbn": "978-0-14-118667-2",
+    "author": "Philip K. Dick",
+    "publicationYear": 1962,
+    "summary": "An alternate history novel depicting a world where the Axis powers won World War II and control the United States.",
+    "genre": "Alternate History",
+    "publisher": "Putnam"
+  },
+  {
+    "title": "The Book Thief",
+    "isbn": "978-0-375-83100-3",
+    "author": "Markus Zusak",
+    "publicationYear": 2005,
+    "summary": "A historical novel narrated by Death, following a young girl's life in Nazi Germany during World War II.",
+    "genre": "Historical Fiction",
+    "publisher": "Knopf"
+  },
+  {
+    "title": "The Crying of Lot 49",
+    "isbn": "978-0-06-091307-6",
+    "author": "Thomas Pynchon",
+    "publicationYear": 1966,
+    "summary": "A postmodern novel exploring conspiracy theories and the search for meaning in a chaotic world.",
+    "genre": "Postmodern Fiction",
+    "publisher": "J.B. Lippincott"
+  },
+  {
+    "title": "The Glass Castle",
+    "isbn": "978-0-7432-4759-2",
+    "author": "Jeannette Walls",
+    "publicationYear": 2005,
+    "summary": "A memoir detailing the author's unconventional and often difficult childhood with her dysfunctional family.",
+    "genre": "Memoir",
+    "publisher": "Scribner"
+  },
+  {
+    "title": "The Lost World",
+    "isbn": "978-0-8125-3394-9",
+    "author": "Michael Crichton",
+    "publicationYear": 1995,
+    "summary": "A science fiction novel featuring a return to the dinosaur-inhabited island, Isla Sorna, depicted in 'Jurassic Park.'",
+    "genre": "Science Fiction",
+    "publisher": "Knopf"
+  },
+  {
+    "title": "The God of Small Things",
+    "isbn": "978-0-06-097749-8",
+    "author": "Arundhati Roy",
+    "publicationYear": 1997,
+    "summary": "A novel exploring family, societal norms, and forbidden love in post-colonial India.",
+    "genre": "Fiction",
+    "publisher": "Random House"
+  },
+  {
+    "title": "The Hitchhiker's Guide to the Galaxy",
+    "isbn": "978-0-345-39182-0",
+    "author": "Douglas Adams",
+    "publicationYear": 1979,
+    "summary": "A comedic science fiction series following the misadventures of Arthur Dent after Earth's destruction.",
+    "genre": "Science Fiction",
+    "publisher": "Pan Books"
+  },
+  {
+    "title": "The Black Dahlia",
+    "isbn": "978-0-446-61135-3",
+    "author": "James Ellroy",
+    "publicationYear": 1987,
+    "summary": "A crime novel inspired by the real-life unsolved murder of Elizabeth Short, known as the Black Dahlia.",
+    "genre": "Crime Fiction",
+    "publisher": "Mysterious Press"
+  },
+  {
+    "title": "The Notebook",
+    "isbn": "978-0-446-52080-2",
+    "author": "Nicholas Sparks",
+    "publicationYear": 1996,
+    "summary": "A romantic novel telling the love story of Noah Calhoun and Allie Nelson over several decades.",
+    "genre": "Romance",
+    "publisher": "Warner Books"
+  },
+  {
+    "title": "The House of the Spirits",
+    "isbn": "978-0-553-37613-9",
+    "author": "Isabel Allende",
+    "publicationYear": 1982,
+    "summary": "A magical realist novel spanning generations in the Trueba family in post-colonial Chile.",
+    "genre": "Magical Realism",
+    "publisher": "Alfred A. Knopf"
+  },
+  {
+    "title": "The Sense of an Ending",
+    "isbn": "978-0-307-94808-8",
+    "author": "Julian Barnes",
+    "publicationYear": 2011,
+    "summary": "A novel exploring memory, aging, and the consequences of our actions, centered around the life of Tony Webster.",
+    "genre": "Fiction",
+    "publisher": "Jonathan Cape"
+  },
+  {
+    "title": "The Dark Tower: The Gunslinger",
+    "isbn": "978-0-451-16397-3",
+    "author": "Stephen King",
+    "publicationYear": 1982,
+    "summary": "The first book in 'The Dark Tower' series, following Roland Deschain's quest for the mysterious Dark Tower.",
+    "genre": "Dark Fantasy",
+    "publisher": "Donald M. Grant/Scribner"
+  },
+  {
+    "title": "The Clan of the Cave Bear",
+    "isbn": "978-0-553-24509-8",
+    "author": "Jean M. Auel",
+    "publicationYear": 1980,
+    "summary": "A historical fiction novel set in prehistoric times, following the life of Ayla, an orphaned Cro-Magnon girl.",
+    "genre": "Historical Fiction",
+    "publisher": "Crown Publishing Group"
+  },
+  {
+    "title": "The Glass Menagerie",
+    "isbn": "978-0-8112-0040-3",
+    "author": "Tennessee Williams",
+    "publicationYear": 1944,
+    "summary": "A play depicting the struggles of a family in St. Louis, with a focus on the character of Laura Wingfield and her glass figurines.",
+    "genre": "Play",
+    "publisher": "New Directions"
+  },
+  {
+    "title": "The Joy of Cooking",
+    "isbn": "978-0-452-24993-3",
+    "author": "Irma S. Rombauer",
+    "publicationYear": 1931,
+    "summary": "A classic cookbook providing a comprehensive guide to cooking techniques and recipes for a wide range of dishes.",
+    "genre": "Cookbook",
+    "publisher": "Bobbs-Merrill"
+  },
+  {
+    "title": "The Tipping Point",
+    "isbn": "978-0-316-34662-7",
+    "author": "Malcolm Gladwell",
+    "publicationYear": 2000,
+    "summary": "A nonfiction book exploring the phenomenon of how small actions can lead to large societal changes.",
+    "genre": "Nonfiction",
+    "publisher": "Little, Brown and Company"
+  },
+  {
+    "title": "The Night Circus",
+    "isbn": "978-0-307-59347-5",
+    "author": "Erin Morgenstern",
+    "publicationYear": 2011,
+    "summary": "A fantasy novel featuring a magical competition between two illusionists, Celia and Marco, set in a mysterious circus.",
+    "genre": "Fantasy",
+    "publisher": "Doubleday"
+  },
+  {
+    "title": "The Remains of the Day",
+    "isbn": "978-0-571-14909-3",
+    "author": "Kazuo Ishiguro",
+    "publicationYear": 1989,
+    "summary": "A novel narrated by an English butler, Stevens, reflecting on his life and service to Lord Darlington.",
+    "genre": "Fiction",
+    "publisher": "Faber and Faber"
+  },
+  {
+    "title": "The Call of the Wild",
+    "isbn": "978-0-486-27683-0",
+    "author": "Jack London",
+    "publicationYear": 1903,
+    "summary": "An adventure novel depicting the journey of a domesticated dog, Buck, as he becomes a wild wolf in the Yukon Territory.",
+    "genre": "Adventure",
+    "publisher": "Macmillan Publishers"
+  },
+  {
+    "title": "The Remnant Chronicles: The Kiss of Deception",
+    "isbn": "978-0-8050-9921-1",
+    "author": "Mary E. Pearson",
+    "publicationYear": 2014,
+    "summary": "The first book in 'The Remnant Chronicles,' a young adult fantasy series involving a runaway princess and political intrigue.",
+    "genre": "Young Adult Fantasy",
+    "publisher": "Henry Holt"
+  },
+  {
+    "title": "The Shadow of the Wind",
+    "isbn": "978-1-59448-804-2",
+    "author": "Carlos Ruiz Zafón",
+    "publicationYear": 2001,
+    "summary": "A mystery novel set in post-World War II Barcelona, involving a young boy discovering a forgotten author's works.",
+    "genre": "Mystery",
+    "publisher": "Penguin Books"
+  },
+  {
+    "title": "The Demon-Haunted World: Science as a Candle in the Dark",
+    "isbn": "978-0-345-40946-1",
+    "author": "Carl Sagan",
+    "publicationYear": 1995,
+    "summary": "A science book advocating critical thinking and the scientific method as tools for understanding the world.",
+    "genre": "Science",
+    "publisher": "Random House"
+  },
+  {
+    "title": "The Stand",
+    "isbn": "978-0-385-12168-2",
+    "author": "Stephen King",
+    "publicationYear": 1978,
+    "summary": "A post-apocalyptic horror novel depicting the struggle between good and evil in a world decimated by a pandemic.",
+    "genre": "Horror",
+    "publisher": "Doubleday"
+  },
+  {
+    "title": "The Wind-Up Bird Chronicle",
+    "isbn": "978-0-679-76767-9",
+    "author": "Haruki Murakami",
+    "publicationYear": 1994,
+    "summary": "A surreal novel involving a man's search for his missing wife and the strange characters he encounters.",
+    "genre": "Surreal Fiction",
+    "publisher": "Knopf"
+  },
+  {
+    "title": "The Ocean at the End of the Lane",
+    "isbn": "978-0-06-225565-5",
+    "author": "Neil Gaiman",
+    "publicationYear": 2013,
+    "summary": "A fantasy novel blending childhood memories with magical elements, centered around a pond called the Hempstock farm.",
+    "genre": "Fantasy",
+    "publisher": "William Morrow"
+  },
+  {
+    "title": "The Bourne Supremacy",
+    "isbn": "978-0-553-05092-1",
+    "author": "Robert Ludlum",
+    "publicationYear": 1986,
+    "summary": "A thriller continuing the story of amnesiac operative Jason Bourne as he becomes the target of a dangerous assassin.",
+    "genre": "Thriller",
+    "publisher": "Random House"
+  },
+  {
+    "title": "The Tenant of Wildfell Hall",
+    "isbn": "978-0-19-284035-3","genre": "Historical Fiction",
+    "publicationYear": 1848,
+    "summary": "A novel challenging societal norms, depicting a woman's escape from an abusive marriage and her struggle for independence.",
+    "author": "Anne Brontë",
+    "publisher": "Thomas Cautley Newby"
+  },
+  {
+    "title": "The Malazan Book of the Fallen: Gardens of the Moon",
+    "isbn": "978-0-553-81957-1",
+    "author": "Steven Erikson",
+    "publicationYear": 1999,
+    "summary": "The first book in 'The Malazan Book of the Fallen' series, an epic fantasy saga with a large and complex plot.",
+    "genre": "Epic Fantasy",
+    "publisher": "Bantam Books"
+  },
+  {
+    "title": "The Shining",
+    "isbn": "978-0-385-12167-5",
+    "author": "Stephen King",
+    "publicationYear": 1977,
+    "summary": "A horror novel depicting the descent into madness of Jack Torrance, who takes his family to an isolated hotel for the winter.",
+    "genre": "Horror",
+    "publisher": "Doubleday"
+  },
+  {
+    "title": "The Catcher in the Rye",
+    "isbn": "978-0-316-76948-0",
+    "author": "J.D. Salinger",
+    "publicationYear": 1951,
+    "summary": "A coming-of-age novel narrated by Holden Caulfield, a disenchanted teenager navigating the challenges of adulthood.",
+    "genre": "Fiction",
+    "publisher": "Little, Brown and Company"
+  },
+  {
+    "title": "The Hunchback of Notre-Dame",
+    "isbn": "978-0-14-043377-2",
+    "author": "Victor Hugo",
+    "publicationYear": 1831,
+    "summary": "A historical novel set in medieval Paris, revolving around the bell-ringer Quasimodo and the beautiful gypsy Esmeralda.",
+    "genre": "Historical Fiction",
+    "publisher": "Gosselin"
+  },
+  {
+    "title": "The No. 1 Ladies' Detective Agency",
+    "isbn": "978-1-4013-8187-7",
+    "author": "Alexander McCall Smith",
+    "publicationYear": 1998,
+    "summary": "The first book in 'The No. 1 Ladies' Detective Agency' series, featuring Precious Ramotswe solving cases in Botswana.",
+    "genre": "Mystery",
+    "publisher": "Polygon Books"
+  },
+  {
+    "title": "The Road Less Traveled",
+    "isbn": "978-0-7432-4698-4",
+    "author": "M. Scott Peck",
+    "publicationYear": 1978,
+    "summary": "A self-help book exploring the concept of love as a path to spiritual growth and fulfillment.",
+    "genre": "Self-Help",
+    "publisher": "Simon & Schuster"
+  },
+  {
+    "title": "The Woman in the Window",
+    "isbn": "978-0-06-279145-4",
+    "author": "A.J. Finn",
+    "publicationYear": 2018,
+    "summary": "A psychological thriller featuring an agoraphobic woman who believes she has witnessed a crime in her neighbor's house.",
+    "genre": "Thriller",
+    "publisher": "William Morrow"
+  },
+  {
+    "title": "The Three Musketeers",
+    "isbn": "978-1-59308-073-9",
+    "author": "Alexandre Dumas",
+    "publicationYear": 1844,
+    "summary": "An adventure novel following the escapades of d'Artagnan and his three musketeer friends in 17th-century France.",
+    "genre": "Adventure",
+    "publisher": "Penguin Classics"
+  },
+  {
+    "title": "The Devil Wears Prada",
+    "isbn": "978-0-385-50828-5",
+    "author": "Lauren Weisberger",
+    "publicationYear": 2003,
+    "summary": "A comedic novel depicting the experiences of a young woman working for a powerful and demanding fashion magazine editor.",
+    "genre": "Comedy",
+    "publisher": "Doubleday"
+  },
+  {
+    "title": "The Little Prince",
+    "isbn": "978-0-15-601219-5",
+    "author": "Antoine de Saint-Exupéry",
+    "publicationYear": 1943,
+    "summary": "A novella featuring a young prince who travels from planet to planet, learning valuable life lessons.",
+    "genre": "Novella",
+    "publisher": "Reynal & Hitchcock"
+  },
+  {
+    "title": "The Girl with the Pearl Earring",
+    "isbn": "978-0-452-28241-6",
+    "author": "Tracy Chevalier",
+    "publicationYear": 1999,
+    "summary": "A historical novel exploring the life of Griet, a maid who becomes the subject of a painting by Johannes Vermeer.",
+    "genre": "Historical Fiction",
+    "publisher": "Dutton"
+  },
+  {
+    "title": "The Nightingale",
+    "isbn": "978-1-250-09102-4",
+    "author": "Kristin Hannah",
+    "publicationYear": 2015,
+    "summary": "A historical novel following two sisters in France during World War II and their struggle to survive and resist the German occupation.",
+    "genre": "Historical Fiction",
+    "publisher": "St. Martin's Press"
+  },
+  {
+    "title": "The Magicians",
+    "isbn": "978-0-452-29753-6",
+    "author": "Lev Grossman",
+    "publicationYear": 2009,
+    "summary": "A fantasy novel featuring Quentin Coldwater, who discovers that the magical land he read about as a child is real.",
+    "genre": "Fantasy",
+    "publisher": "Viking Press"
+  },
+  {
+    "title": "The Great Gatsby",
+    "isbn": "978-0-7432-7356-5",
+    "author": "F. Scott Fitzgerald",
+    "publicationYear": 1925,
+    "summary": "A classic novel depicting the decadence and moral ambiguity of the Jazz Age in 1920s America.",
+    "genre": "Fiction",
+    "publisher": "Charles Scribner's Sons"
+  },
+  {
+    "title": "The Help",
+    "isbn": "978-0-399-15534-5",
+    "author": "Kathryn Stockett",
+    "publicationYear": 2009,
+    "summary": "A novel set in the 1960s Southern United States, exploring the relationships between African-American maids and their white employers.",
+    "genre": "Historical Fiction",
+    "publisher": "Putnam"
+  },
+  {
+    "title": "The Martian",
+    "isbn": "978-0-553-41802-6",
+    "author": "Andy Weir",
+    "publicationYear": 2011,
+    "summary": "A science fiction novel following astronaut Mark Watney's struggle for survival on Mars after being left behind by his crew.",
+    "genre": "Science Fiction",
+    "publisher": "Crown Publishing Group"
+  },
+  {
+    "title": "The Picture of Dorian Gray",
+    "isbn": "978-0-14-143957-0",
+    "author": "Oscar Wilde",
+    "publicationYear": 1890,
+    "summary": "A philosophical novel exploring the consequences of aestheticism and the pursuit of pleasure without consequences.",
+    "genre": "Philosophical Fiction",
+    "publisher": "Ward, Lock and Company"
+  },
+  {
+    "title": "The Maze Runner",
+    "isbn": "978-0-385-73794-4",
+    "author": "James Dashner",
+    "publicationYear": 2009,
+    "summary": "A young adult dystopian novel where a group of teenagers must navigate a deadly maze with no memory of their past.",
+    "genre": "Young Adult Dystopian",
+    "publisher": "Delacorte Press"
+  },
+  {
+    "title": "The Light Between Oceans",
+    "isbn": "978-1-5011-1826-6",
+    "author": "M.L. Stedman",
+    "publicationYear": 2012,
+    "summary": "A historical novel about a lighthouse keeper and his wife who rescue and raise a baby adrift in a boat.",
+    "genre": "Historical Fiction",
+    "publisher": "Scribner"
+  },
+  {
+    "title": "The Fifth Season",
+    "isbn": "978-0-316-22929-6",
+    "author": "N.K. Jemisin",
+    "publicationYear": 2015,
+    "summary": "The first book in 'The Broken Earth' trilogy, a fantasy series exploring a world where catastrophic climate change can be controlled by orogeny.",
+    "genre": "Fantasy",
+    "publisher": "Orbit"
+  },
+  {
+    "title": "The Lovely Bones",
+    "isbn": "978-0-316-66634-3",
+    "author": "Alice Sebold",
+    "publicationYear": 2002,
+    "summary": "A novel narrated by a young girl who watches from her personal heaven as her family copes with her brutal murder.",
+    "genre": "Fiction",
+    "publisher": "Little, Brown and Company"
+  }
+]

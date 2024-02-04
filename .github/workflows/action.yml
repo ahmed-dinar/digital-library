@@ -1,0 +1,70 @@
+# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
+# More GitHub Actions for Azure: https://github.com/Azure/actions
+
+name: Install, Build and Test
+on:
+  pull_request:
+    types:
+      - opened
+      - closed
+      - synchronize
+    branches:
+      - main
+    paths:
+      - "server/**"
+
+jobs:
+  # Label of the container job
+  build:
+    # Containers must run in Linux based operating systems
+    runs-on: ubuntu-latest
+    # Docker Hub image that `container-job` executes in
+    container: node:17
+
+    # Service containers to run with `container-job`
+    services:
+      # Label used to access the service container
+      postgres:
+        # Docker Hub image
+        image: postgres:15
+        # Provide the password for postgres
+        env:
+          POSTGRES_USER: prisma
+          POSTGRES_PASSWORD: prisma
+          POSTGRES_DB: digital_lib_db_docker
+        # Set health checks to wait until postgres has started
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js version
+        uses: actions/setup-node@v2
+        with:
+          node-version: "18.x"
+
+      - name: CD to server
+        run: cd server
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Integration test
+        run: npm run test:cicd
+        env:
+          NODE_ENV: "test"
+          DATABASE_URL: "postgresql://prisma:prisma@postgres:5432/digital_lib_db_docker?schema=public&connect_timeout=300"
+
+      - name: E2e test
+        run: npm run test:e2e:cicd
+        env:
+          NODE_ENV: "test"
+          DATABASE_URL: "postgresql://prisma:prisma@postgres:5432/digital_lib_db_docker?schema=public&connect_timeout=300"
+
+      - name: Build
+        run: npm run build --if-present

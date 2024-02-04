@@ -59,6 +59,3 @@ jobs:
         env:
           NODE_ENV: "test"
           DATABASE_URL: "postgresql://prisma:prisma@postgres:5432/digital_lib_db_docker?schema=public&connect_timeout=300"
-
-      - name: Build
-        run: npm run build --if-present

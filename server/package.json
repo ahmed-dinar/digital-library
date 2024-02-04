@@ -22,7 +22,8 @@
     "test:e2e:cicd": "dotenv -e .env.test -- yarn prisma migrate reset --force && dotenv -e .env.test -- jest --config test/jest-e2e.json --verbose",
     "docker:up:test": "docker-compose -f docker/docker-compose-test.yml up -d",
     "docker:down:test": "docker-compose -f docker/docker-compose-test.yml down",
-    "start:migrate:prod": "prisma migrate deploy && npm run start:prod"
+    "start:migrate:prod": "prisma migrate deploy && npm run start:prod",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@nestjs/cli": "^10.3.0",

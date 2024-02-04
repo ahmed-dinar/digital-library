@@ -14,10 +14,12 @@
     "start:prod": "NODE_ENV=production node dist/main",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
     "test": "yarn docker:up:test && dotenv -e .env.test -- yarn prisma migrate reset --force && dotenv -e .env.test -- jest --verbose",
+    "test:cicd": "dotenv -e .env.test -- yarn prisma migrate reset --force && dotenv -e .env.test -- jest --verbose",
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "yarn docker:up:test && dotenv -e .env.test -- yarn prisma migrate reset --force && dotenv -e .env.test -- jest --config test/jest-e2e.json --verbose",
+    "test:e2e:cicd": "dotenv -e .env.test -- yarn prisma migrate reset --force && dotenv -e .env.test -- jest --config test/jest-e2e.json --verbose",
     "docker:up:test": "docker-compose -f docker/docker-compose-test.yml up -d",
     "docker:down:test": "docker-compose -f docker/docker-compose-test.yml down",
     "start:migrate:prod": "prisma migrate deploy && npm run start:prod"

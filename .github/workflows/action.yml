@@ -12,6 +12,7 @@ on:
       - main
     paths:
       - "server/**"
+  workflow_dispatch:
 
 jobs:
   # Label of the container job

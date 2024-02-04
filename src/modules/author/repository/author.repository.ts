@@ -55,4 +55,16 @@ export class AuthorRepository {
       },
     });
   }
+
+  /**
+   *
+   * @param name
+   */
+  async deleteByName(name: string): Promise<void> {
+    await this.prisma.author.delete({
+      where: {
+        name,
+      },
+    });
+  }
 }

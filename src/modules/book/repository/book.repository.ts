@@ -76,6 +76,16 @@ export class BookRepository {
 
   /**
    *
+   * @param title
+   */
+  async deleteByTitle(title: string): Promise<void> {
+    await this.prisma.book.delete({
+      where: { title },
+    });
+  }
+
+  /**
+   *
    * @param id book id
    */
   async findById(id: number): Promise<BookWithRelations | null> {
@@ -119,7 +129,7 @@ export class BookRepository {
 
     if (filterDto?.title) {
       where.title = {
-        contains: filterDto.title,
+        startsWith: filterDto.title,
         mode: 'insensitive',
       };
     }
@@ -155,7 +165,7 @@ export class BookRepository {
         some: {
           author: {
             name: {
-              contains: filterDto.author,
+              startsWith: filterDto.author,
             },
           },
         },
@@ -167,7 +177,7 @@ export class BookRepository {
         some: {
           genre: {
             name: {
-              contains: filterDto.genre,
+              startsWith: filterDto.genre,
             },
           },
         },

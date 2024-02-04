@@ -74,4 +74,16 @@ export class GenreRepository {
 
     return { items: genres, count };
   }
+
+  /**
+   *
+   * @param name
+   */
+  async delete(name: string): Promise<void> {
+    await this.prisma.genre.delete({
+      where: {
+        name,
+      },
+    });
+  }
 }

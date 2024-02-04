@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, Logger } from '@nestjs/common';
 import { Prisma } from '@prisma/client';
 
 import { BookRepository } from '../repository/book.repository';
@@ -8,13 +8,15 @@ import { ObjectType } from '../../../common/interfaces/types.interfaces';
 
 @Injectable()
 export class BookSeeder {
+  private readonly logger = new Logger(BookSeeder.name);
+
   constructor(private bookRepository: BookRepository) {}
 
   /**
    *
    */
   async clear() {
-    console.log('Clear seed');
+    this.logger.log('Clearing seed');
     const seedItems = this.prepareData();
     await this.bookRepository.deleteSeedItems(seedItems);
   }
@@ -26,10 +28,11 @@ export class BookSeeder {
     await this.clear();
 
     const seedItems = this.prepareData();
-    console.log('To seed books: ' + Object.keys(seedItems.items).length);
+    this.logger.log('To seed books: ' + Object.keys(seedItems.items).length);
 
     const authorSeed = await this.seedAuthor(seedItems);
     const genreSeed = await this.seedGenre(seedItems);
+    const isbnList = new Set();
 
     const newBooks = Object.values(seedItems.items)
       // .filter((item, idx) => idx < 2)
@@ -74,18 +77,26 @@ export class BookSeeder {
         }
 
         if (seedItem.isbns.size > 0) {
-          data.editions = {
-            create: Array.from(seedItem.isbns).map((isbn, index) => ({
-              isbn,
-              value: String(index),
-            })),
-          };
+          const uniqueISBNs = Array.from(seedItem.isbns).filter((isbn) => {
+            if (isbnList.has(isbn)) {
+              return false;
+            }
+            isbnList.add(isbn);
+            return true;
+          });
+
+          if (uniqueISBNs.length > 0) {
+            data.editions = {
+              create: uniqueISBNs.map((isbn, index) => ({
+                isbn,
+                value: `${String(index)} edition`,
+              })),
+            };
+          }
         }
 
         return data;
       });
-
-    // console.log(JSON.stringify(newBooks, null, 2));
 
     await Promise.all(
       newBooks.map((newBook) => {
@@ -93,7 +104,7 @@ export class BookSeeder {
       }),
     );
 
-    console.log('Seed books saved: ' + newBooks.length);
+    this.logger.log('Seed books saved: ' + newBooks.length);
 
     return newBooks.length;
   }
@@ -108,7 +119,7 @@ export class BookSeeder {
         }) as Prisma.AuthorCreateInput,
     );
 
-    console.log(authorList.length + ' Authors to seed');
+    this.logger.log(authorList.length + ' Authors to seed');
 
     const createdAuthors = await this.bookRepository.saveManyAuthor(authorList);
 
@@ -127,7 +138,7 @@ export class BookSeeder {
         }) as Prisma.GenreCreateInput,
     );
 
-    console.log(genreList.length + ' Genres to seed');
+    this.logger.log(genreList.length + ' Genres to seed');
 
     const createdGenres = await this.bookRepository.saveManyGenre(genreList);
 
@@ -137,7 +148,7 @@ export class BookSeeder {
   }
 
   private prepareData(): PreSeedData {
-    console.log('Preparing seed data ' + seedData.length);
+    this.logger.log('Preparing seed data ' + seedData.length);
 
     const seedItems: ObjectType<PreSeedItem> = {};
     const seedDataItems = seedData as any;

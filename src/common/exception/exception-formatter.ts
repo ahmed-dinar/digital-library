@@ -2,10 +2,11 @@ import {
   BadRequestException,
   HttpStatus,
   NotFoundException,
-  UnauthorizedException,
 } from '@nestjs/common';
 import { APIError, APIException } from './api.exception';
 import { Prisma } from '@prisma/client';
+
+const isProduction = process.env.NODE_ENV == 'production';
 
 export class ExceptionFormatter {
   /**
@@ -13,14 +14,10 @@ export class ExceptionFormatter {
    *
    * @static
    * @param {APIException} exception
-   * @param {boolean} isProduction
    * @return {*}  {APIError}
    * @memberof ExceptionFormatter
    */
-  static formatAPIException(
-    exception: APIException,
-    isProduction: boolean,
-  ): APIError {
+  static formatAPIException(exception: APIException): APIError {
     return {
       message: exception.message,
       ...(exception.errors && { errors: exception.errors }),
@@ -80,50 +77,30 @@ export class ExceptionFormatter {
   }
 
   /**
-   * Format unauthorized error due to the permission
-   *
-   * @static
-   * @param {UnauthorizedException} exception
-   * @return {*}  {APIError}
-   * @memberof ExceptionFormatter
-   */
-  static formatUnAuthorizedException(
-    exception: UnauthorizedException,
-  ): APIError {
-    const response = exception.getResponse() as {
-      error?: string;
-      message: string;
-    };
-
-    return {
-      message: response.message,
-    };
-  }
-
-  /**
    * format and log unknown error those are not handled
    *
    * @static
    * @param {Error} exception
-   * @param {boolean} isProduction
    * @return {*}  {APIError}
    * @memberof ExceptionFormatter
    */
-  static formatUnknownError(exception: Error, isProduction: boolean): APIError {
+  static formatUnknownError(exception: Error): APIError {
     return {
-      message: 'Internal Server Error',
+      message: 'Internal Server Error: ' + exception.message,
       ...(!isProduction && exception.stack && { stack: exception.stack }),
     };
   }
 
+  /**
+   * Format prisma errors
+   * @param error
+   */
   static formatPrismaError(
     error: Prisma.PrismaClientKnownRequestError,
   ): APIException {
     // Default values for status and message
     let status = HttpStatus.INTERNAL_SERVER_ERROR;
     let message: string;
-
-    console.log(error);
 
     // Customize the response based on Prisma error codes
     switch (error.code) {
@@ -133,13 +110,13 @@ export class ExceptionFormatter {
         break;
       case 'P2002': // Record not found
         status = HttpStatus.BAD_REQUEST;
-        message = `Already exists: ${error.meta?.target}`;
+        message = `${error.meta?.modelName} already exists with given '${error.meta?.target}'`;
         break;
-      case 'P2014': // Record not found
+      case 'P2014':
         status = HttpStatus.BAD_REQUEST;
         message = `Invalid ID: ${error.meta?.target}`;
         break;
-      case 'P2003': // Record not found
+      case 'P2003':
         status = HttpStatus.BAD_REQUEST;
         message = `Invalid input data: ${error.meta?.target}`;
         break;

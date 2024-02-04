@@ -71,6 +71,14 @@ export class GenreService {
     return this.genreMapper.fromEntityListToDto(genres);
   }
 
+  /**
+   *
+   * @param genre
+   */
+  async delete(genre: string): Promise<void> {
+    await this.genreRepository.delete(genre);
+  }
+
   private async getById(id: number): Promise<Genre> {
     const genre = await this.genreRepository.findById(id);
 

@@ -63,10 +63,6 @@ export class BookService {
     filterDto: BookFilterDto,
     sortDto: SortDto,
   ): Promise<ItemListDto<BookDto>> {
-    console.log(pageDto);
-    console.log(filterDto);
-    console.log(sortDto);
-
     const res = await this.bookRepository.findAll(pageDto.page, pageDto.limit, {
       filterDto,
       sortDto,
@@ -169,6 +165,14 @@ export class BookService {
   async remove(id: number) {
     const book = await this.getById(id);
     await this.bookRepository.delete(book.id);
+  }
+
+  /**
+   *
+   * @param title
+   */
+  async removeByTitle(title: string) {
+    await this.bookRepository.deleteByTitle(title);
   }
 
   /**

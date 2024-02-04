@@ -172,6 +172,14 @@ export class BookService {
   }
 
   /**
+   *
+   * @param title
+   */
+  async removeByTitle(title: string) {
+    await this.bookRepository.deleteByTitle(title);
+  }
+
+  /**
    * Find a book by id, if not found throws not found error
    * @param id
    * @private

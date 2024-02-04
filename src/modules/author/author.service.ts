@@ -20,6 +20,8 @@ export class AuthorService {
    * @param createAuthorDto
    */
   async create(createAuthorDto: CreateAuthorDto): Promise<AuthorDto> {
+    // console.log('DATABASE_URL ------------> ' + process.env.DATABASE_URL);
+
     const authorData: Prisma.AuthorCreateInput =
       this.authorMapper.fromCreateDtoToEntity(createAuthorDto);
 
@@ -46,12 +48,20 @@ export class AuthorService {
   }
 
   /**
-   *
+   * Search prefix
    * @param text
    */
   async search(text: string): Promise<AuthorDto[]> {
     const authors = await this.authorRepository.findByName(text);
     return this.authorMapper.fromEntityListToDto(authors);
+  }
+
+  /**
+   *
+   * @param name
+   */
+  async delete(name: string): Promise<void> {
+    await this.authorRepository.deleteByName(name);
   }
 
   private async getById(id: number): Promise<Author> {

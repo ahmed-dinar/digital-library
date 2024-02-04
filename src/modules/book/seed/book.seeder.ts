@@ -30,6 +30,7 @@ export class BookSeeder {
 
     const authorSeed = await this.seedAuthor(seedItems);
     const genreSeed = await this.seedGenre(seedItems);
+    const isbnList = new Set();
 
     const newBooks = Object.values(seedItems.items)
       // .filter((item, idx) => idx < 2)
@@ -74,18 +75,26 @@ export class BookSeeder {
         }
 
         if (seedItem.isbns.size > 0) {
-          data.editions = {
-            create: Array.from(seedItem.isbns).map((isbn, index) => ({
-              isbn,
-              value: String(index),
-            })),
-          };
+          const uniqueISBNs = Array.from(seedItem.isbns).filter((isbn) => {
+            if (isbnList.has(isbn)) {
+              return false;
+            }
+            isbnList.add(isbn);
+            return true;
+          });
+
+          if (uniqueISBNs.length > 0) {
+            data.editions = {
+              create: uniqueISBNs.map((isbn, index) => ({
+                isbn,
+                value: `${String(index)} edition`,
+              })),
+            };
+          }
         }
 
         return data;
       });
-
-    // console.log(JSON.stringify(newBooks, null, 2));
 
     await Promise.all(
       newBooks.map((newBook) => {

@@ -1,4 +1,4 @@
-import { HttpStatus, Injectable } from '@nestjs/common';
+import { HttpStatus, Injectable, Logger } from '@nestjs/common';
 
 import { CreateAuthorDto } from './dto/create-author.dto';
 import { UpdateAuthorDto } from './dto/update-author.dto';
@@ -10,6 +10,8 @@ import { APIException } from '../../common/exception/api.exception';
 
 @Injectable()
 export class AuthorService {
+  private readonly logger = new Logger(AuthorService.name);
+
   constructor(
     private authorRepository: AuthorRepository,
     private authorMapper: AuthorMapper,
@@ -20,7 +22,7 @@ export class AuthorService {
    * @param createAuthorDto
    */
   async create(createAuthorDto: CreateAuthorDto): Promise<AuthorDto> {
-    // console.log('DATABASE_URL ------------> ' + process.env.DATABASE_URL);
+    this.logger.log('Creating new author...');
 
     const authorData: Prisma.AuthorCreateInput =
       this.authorMapper.fromCreateDtoToEntity(createAuthorDto);

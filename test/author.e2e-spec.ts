@@ -3,6 +3,8 @@ import { INestApplication } from '@nestjs/common';
 import * as request from 'supertest';
 import { AppModule } from '../src/app.module';
 import { CreateAuthorDto } from '../src/modules/author/dto/create-author.dto';
+import { ValidationPipe } from '@nestjs/common/pipes/validation.pipe';
+import { AllExceptionsFilter } from '../src/common/filters/exeception-filters/all-exception-filter';
 
 describe('AuthorController (e2e)', () => {
   const data: CreateAuthorDto = {
@@ -17,6 +19,10 @@ describe('AuthorController (e2e)', () => {
     }).compile();
 
     app = moduleFixture.createNestApplication();
+    app.useGlobalPipes(new ValidationPipe({ whitelist: true }));
+    app.useGlobalFilters(new AllExceptionsFilter());
+    app.enableCors();
+
     await app.init();
   });
 
@@ -35,14 +41,16 @@ describe('AuthorController (e2e)', () => {
         });
     });
 
-    // it('should return error on duplicate author', async () => {
-    //   const response = await request(app.getHttpServer())
-    //     .post('/authors')
-    //     .send(data)
-    //     .expect(400);
-    //
-    //   console.log(response);
-    // });
+    it('should return error on duplicate author', async () => {
+      const response = await request(app.getHttpServer())
+        .post('/authors')
+        .send(data)
+        .expect(400);
+
+      expect(response.body).toBeDefined();
+      expect(response.body).toHaveProperty('message');
+      expect(response.body.message).toContain('already exists');
+    });
   });
 
   it('/authors/search (GET)', () => {

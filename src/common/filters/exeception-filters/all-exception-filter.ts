@@ -3,10 +3,8 @@ import {
   BadRequestException,
   Catch,
   ExceptionFilter,
-  ForbiddenException,
   HttpStatus,
   NotFoundException,
-  UnauthorizedException,
 } from '@nestjs/common';
 import { Response } from 'express';
 
@@ -16,10 +14,9 @@ import { Prisma } from '@prisma/client';
 
 @Catch()
 export class AllExceptionsFilter<T> implements ExceptionFilter {
-  // @ts-ignore
-  private isProduction: boolean = process.env === 'PRODUCTION';
-
   catch(exception: T, host: ArgumentsHost): any {
+    //console.error(exception);
+
     const ctx = host.switchToHttp();
     const res: Response = ctx.getResponse<Response>();
     let error: APIError = {
@@ -28,10 +25,7 @@ export class AllExceptionsFilter<T> implements ExceptionFilter {
     let status: HttpStatus = HttpStatus.OK;
 
     if (exception instanceof APIException) {
-      error = ExceptionFormatter.formatAPIException(
-        exception,
-        this.isProduction,
-      );
+      error = ExceptionFormatter.formatAPIException(exception);
       status = exception.httpStatus;
     } else if (exception instanceof BadRequestException) {
       // validation error
@@ -48,23 +42,14 @@ export class AllExceptionsFilter<T> implements ExceptionFilter {
     ) {
       error = { message: exception.message };
       status = HttpStatus.INTERNAL_SERVER_ERROR;
-    } else if (exception instanceof UnauthorizedException) {
-      error = ExceptionFormatter.formatUnAuthorizedException(exception);
-      status = exception.getStatus();
     } else if (exception instanceof NotFoundException) {
       error = ExceptionFormatter.formatNotFoundException(exception);
       status = exception.getStatus();
-    } else if (exception instanceof ForbiddenException) {
-      error = ExceptionFormatter.formatUnAuthorizedException(exception);
-      status = exception.getStatus();
     } else if (exception instanceof Error) {
       // unknown internal error
-      error = ExceptionFormatter.formatUnknownError(
-        exception,
-        this.isProduction,
-      );
+      error = ExceptionFormatter.formatUnknownError(exception);
     }
 
-    res.status(status || HttpStatus.INTERNAL_SERVER_ERROR).json({ error });
+    res.status(status || HttpStatus.INTERNAL_SERVER_ERROR).json(error);
   }
 }

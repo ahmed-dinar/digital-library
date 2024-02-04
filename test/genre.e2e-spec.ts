@@ -1,8 +1,11 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { INestApplication } from '@nestjs/common';
 import * as request from 'supertest';
+
 import { AppModule } from '../src/app.module';
 import { CreateGenreDto } from '../src/modules/genre/dto/create-genre.dto';
+import { AllExceptionsFilter } from '../src/common/filters/exeception-filters/all-exception-filter';
+import { ValidationPipe } from '@nestjs/common/pipes/validation.pipe';
 
 describe('GenreController (e2e)', () => {
   const data: CreateGenreDto = {
@@ -17,6 +20,10 @@ describe('GenreController (e2e)', () => {
     }).compile();
 
     app = moduleFixture.createNestApplication();
+    app.useGlobalPipes(new ValidationPipe({ whitelist: true }));
+    app.useGlobalFilters(new AllExceptionsFilter());
+    app.enableCors();
+
     await app.init();
   });
 
@@ -33,6 +40,17 @@ describe('GenreController (e2e)', () => {
           expect(body).toHaveProperty('name');
           expect(body.name).toEqual(data.name);
         });
+    });
+
+    it('should return error on duplicate genre', async () => {
+      const response = await request(app.getHttpServer())
+        .post('/genres')
+        .send(data)
+        .expect(400);
+
+      expect(response.body).toBeDefined();
+      expect(response.body).toHaveProperty('message');
+      expect(response.body.message).toContain('already exists');
     });
   });
 

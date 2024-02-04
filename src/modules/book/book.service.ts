@@ -63,10 +63,6 @@ export class BookService {
     filterDto: BookFilterDto,
     sortDto: SortDto,
   ): Promise<ItemListDto<BookDto>> {
-    console.log(pageDto);
-    console.log(filterDto);
-    console.log(sortDto);
-
     const res = await this.bookRepository.findAll(pageDto.page, pageDto.limit, {
       filterDto,
       sortDto,

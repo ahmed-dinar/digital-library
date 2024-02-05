@@ -1,10 +1,11 @@
-import { Injectable } from '@nestjs/common';
-import { PrismaService } from '../../../database/prisma.service';
-import { Author, Prisma } from '@prisma/client';
+import {Injectable} from '@nestjs/common';
+import {PrismaService} from '../../../database/prisma.service';
+import {Author, Genre, Prisma} from '@prisma/client';
 
 @Injectable()
 export class AuthorRepository {
-  constructor(private prisma: PrismaService) {}
+  constructor(private prisma: PrismaService) {
+  }
 
   /**
    *
@@ -22,7 +23,7 @@ export class AuthorRepository {
    */
   async findById(id: number): Promise<Author | null> {
     return this.prisma.author.findUnique({
-      where: { id },
+      where: {id},
     });
   }
 
@@ -66,5 +67,25 @@ export class AuthorRepository {
         name,
       },
     });
+  }
+
+  /**
+   *
+   * @param page
+   * @param limit
+   */
+  async list(
+    page: number,
+    limit: number,
+  ): Promise<{ items: Author[]; count: number }> {
+    const [authors, count] = await this.prisma.$transaction([
+      this.prisma.author.findMany({
+        skip: Math.max(page - 1, 0) * limit,
+        take: limit,
+      }),
+      this.prisma.author.count(),
+    ]);
+
+    return {items: authors, count};
   }
 }

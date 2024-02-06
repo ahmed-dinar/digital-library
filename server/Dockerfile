@@ -7,7 +7,7 @@ WORKDIR /usr/src/app
 # Copy package.json and package-lock.json to the working directory
 COPY package*.json ./
 
-# Install the project dependencies
+# Install the project dependencies, ignore-scripts to ignore postinstall in docker
 RUN npm install --ignore-scripts
 
 # Copy the entire application to the container

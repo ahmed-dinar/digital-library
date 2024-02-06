@@ -1,10 +1,11 @@
 import axios from 'axios';
 
-console.log('process.env.CORE_API_URL ', process.env.CORE_API_URL);
+console.log('process.env.CORE_API_URL ', process.env.NEXT_PUBLIC_CORE_API_URL);
+console.log('process.env.CORE_API_URL ', process.env.NEXT_PUBLIC_CORE_API_TIMEOUT);
 
 export const coreAxios = axios.create({
-  baseURL: 'http://localhost:3000',
-  timeout: parseInt(process.env.CORE_API_TIMEOUT as string, 10),
+  baseURL: process.env.NEXT_PUBLIC_CORE_API_URL,
+  timeout: parseInt(process.env.NEXT_PUBLIC_CORE_API_TIMEOUT as string, 10),
   headers: {
     'Content-Type': 'application/json',
     'Access-Control-Allow-Origin': '*',

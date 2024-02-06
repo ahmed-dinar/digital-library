@@ -15,7 +15,7 @@ describe('AppController', () => {
   });
 
   describe('root', () => {
-    it('should return "Hello World!"', () => {
+    it('should return "Hello World! Welcome to Digital Library!"', () => {
       expect(appController.getHello()).toBe('Hello World! Welcome to Digital Library!');
     });
   });

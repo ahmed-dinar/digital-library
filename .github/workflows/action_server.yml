@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Install, Build and Test
+name: Install, Build, Test & Deploy Backend
 on:
   pull_request:
     types:
@@ -60,27 +60,11 @@ jobs:
           NODE_ENV: "test"
           DATABASE_URL: "postgresql://prisma:prisma@postgres:5432/digital_lib_db_docker?schema=public&connect_timeout=300"
 
-  # Label of the container job
-  build_frontend:
-    # Containers must run in Linux based operating systems
-    runs-on: ubuntu-latest
-    # Docker Hub image that `container-job` executes in
-    container: node:18
-
-    steps:
-      - name: Check out repository code
-        uses: actions/checkout@v2
-
-      - name: Set up Node.js version
-        uses: actions/setup-node@v2
+      - name: Deploy to vercel
+        uses: amondnet/vercel-action@v20
         with:
-          node-version: "18.x"
+          vercel-token: ${{ secrets.VERCEL_DEPLOY_TOKEN }}
+          vercel-args: '--prod'
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_BACKEND_PROJECT_ID }}
 
-      - name: Install and Build
-        run: |
-          cd client
-          npm install
-          npm run build --if-present
-  
-  deploy_backend:
-    

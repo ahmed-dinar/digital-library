@@ -1,18 +1,10 @@
 version: '3.9'
 
-services:
-  postgresdb:
-    image: postgres:15
-    restart: always
-    container_name: digital-lib-db-pg
-    ports:
-      - '5434:5432'
-    environment:
-      POSTGRES_USER: prisma
-      POSTGRES_PASSWORD: prisma
-      POSTGRES_DB: digital_lib_db_docker
+include:
+  - ../docker-compose-db.yml
 
-  nestapp:
+services:
+  dglib-backend:
     build:
       context: .
       dockerfile: Dockerfile
@@ -20,6 +12,8 @@ services:
       - "3000:3000"
     depends_on:
       - postgresdb
+    volumes:
+      - ./backend:/app/backend
     environment:
       NODE_ENV: production
       DATABASE_URL: postgresql://prisma:prisma@postgresdb:5432/digital_lib_db_docker?schema=public&connect_timeout=300

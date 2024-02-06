@@ -1,0 +1,5 @@
+version: '3.9'
+
+include:
+  - ./server/docker-compose.yml
+  - ./client/docker-compose.yml

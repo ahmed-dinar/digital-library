@@ -1,0 +1,52 @@
+# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
+# More GitHub Actions for Azure: https://github.com/Azure/actions
+
+name: Install, Build, Test & Deploy Frontend
+env:
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_FRONTEND_PROJECT_ID }}
+on:
+  pull_request:
+    types:
+      - opened
+      - closed
+      - synchronize
+    branches:
+      - main
+    paths:
+      - "client/**"
+  workflow_dispatch:
+
+jobs:
+  # Label of the container job
+  build_frontend:
+    # Containers must run in Linux based operating systems
+    runs-on: ubuntu-latest
+    # Docker Hub image that `container-job` executes in
+    container: node:18
+
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js version
+        uses: actions/setup-node@v2
+        with:
+          node-version: "18.x"
+
+      - name: Install and Build
+        run: |
+          cd client
+          npm install
+          npm run build --if-present
+
+      - name: Install Vercel CLI
+        run: npm install --global vercel@latest
+
+      - name: Pull Vercel Environment Information
+        working-directory: ./client
+        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_DEPLOY_TOKEN }}
+
+      - name: Deploy to Vercel
+        working-directory: ./client
+        run: vercel --prod --confirm --token ${{ secrets.VERCEL_DEPLOY_TOKEN }}

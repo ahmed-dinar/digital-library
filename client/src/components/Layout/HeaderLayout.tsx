@@ -11,21 +11,10 @@ const items = new Array(3).fill(null).map((_, index) => ({
 }));
 
 const HeaderLayout: FC = () => {
-
   return (
-    <Header
-      style={{
-        background: '#ffffff',
-        position: 'sticky',
-        top: 0,
-        zIndex: 1000,
-        width: '100%',
-        display: 'flex',
-        boxShadow: '0 1px 2px 0 rgba(0, 0, 0, 0.03), 0 1px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px 0 rgba(0, 0, 0, 0.02)'
-      }}
-    >
-      <div style={{width: '60%', margin: '0 auto'}}>
-        <h2 style={{fontSize: '20px', fontWeight: '700'}}>Bibliotheca</h2>
+    <Header className="bg-white sticky top-0 z-50 w-full flex shadow-sm">
+      <div className="w-8/12 mx-auto">
+        <h2 className="text-xl font-bold align-middle inline-block pb-2">Bibliotheca</h2>
       </div>
     </Header>
   );

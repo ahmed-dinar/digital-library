@@ -1,16 +1,16 @@
 'use client'
 
-import React, {FC, ReactNode} from "react";
-import {Layout, Menu, theme} from 'antd';
+import React, {FC} from "react";
+import {Layout} from 'antd';
 
 const {Footer} = Layout;
 
 const FooterLayout: FC = () => {
 
   return (
-    <Footer style={{textAlign: 'center', background: '#F6F9FE', padding: '50px 20px 15px 20px', borderTop: '1px solid #eaeaea'}}>
+    <Footer className="text-center bg-white pt-11 border-t border-solid border-gray-200">
       <div>
-        Ahmed ©{new Date().getFullYear()}
+        <p className="text-sm font-bold text-gray-400">Ahmed ©{new Date().getFullYear()}</p>
       </div>
     </Footer>
   );

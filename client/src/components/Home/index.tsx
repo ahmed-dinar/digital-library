@@ -108,6 +108,7 @@ const HomeComponent: FC = () => {
                             // src="/book1.png"
                             src="error"
                             fallback={FallbackImageBase64}
+                            alt={'Book image'}
                           />
                         </div>
 
@@ -185,7 +186,7 @@ const HomeComponent: FC = () => {
                   <div className="max-h-96 overflow-auto">
                     <Group style={{width: '100%'}} onChange={onChange}>
                       {authors.map(author => (
-                        <div className="w-full mt-1">
+                        <div key={author.id} className="w-full mt-1">
                           <Checkbox value={author.id}>{author.name}</Checkbox>
                         </div>
                       ))}
@@ -205,7 +206,7 @@ const HomeComponent: FC = () => {
                   <div className="max-h-96 overflow-auto">
                     <Group style={{width: '100%'}} onChange={onChange}>
                       {genres.map(genre => (
-                        <div className="w-full mt-1">
+                        <div key={genre.id} className="w-full mt-1">
                           <Checkbox value={genre.id}>{genre.name}</Checkbox>
                         </div>
                       ))}

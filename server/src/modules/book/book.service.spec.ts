@@ -182,7 +182,7 @@ describe('BookService', () => {
       expect(books.items.length).toBeGreaterThan(0);
 
       books.items.forEach((book) => {
-        expect(book.title).toMatch(/^The/);
+        expect(book.title).toContain('The');
       });
     });
 

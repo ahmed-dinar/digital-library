@@ -2,11 +2,11 @@
 
 import React, {FC, useContext, useEffect, useState} from "react";
 import {Button, DatePicker, DatePickerProps, Drawer, Form, Input, message, Space} from "antd";
-import AddAuthor from "@/components/AddBook/AddAuthor";
-import AddGenre from "@/components/AddBook/AddGenre";
+import AddAuthor from "@/components/UpsertBook/AddAuthor";
+import AddGenre from "@/components/UpsertBook/AddGenre";
 import {SelectValue} from "@/components/DebounceSelect/DebounceSelect";
 import {LibraryContext, LibraryContextType} from "@/components/Library/LibraryContext/LibraryContext";
-import {createBook} from "@/actions/books.action";
+import {createBook, updateBook} from "@/actions/books.action";
 import {BookDto, CreateBookDto} from "@/types/book.types";
 import dayjs from "dayjs";
 
@@ -16,7 +16,8 @@ const {useForm, Item} = Form;
 type PropType = {
   isBookModalOpen: boolean;
   setIsBookModalOpen: (value: boolean) => void,
-  bookItem?: BookDto
+  bookItem?: BookDto,
+  onBookChange?: () => void;
 };
 
 interface FormFields {
@@ -33,7 +34,7 @@ const layout = {
   wrapperCol: {span: 16},
 };
 
-const UpsertBook: FC<PropType> = ({isBookModalOpen, setIsBookModalOpen, bookItem}) => {
+const UpsertBook: FC<PropType> = ({isBookModalOpen, setIsBookModalOpen, bookItem, onBookChange}) => {
   const [form] = useForm<FormFields>();
   const {authors, genres} = useContext<LibraryContextType>(LibraryContext);
   const [selectedAuthors, setSelectedAuthors] = useState<SelectValue[]>([]);
@@ -46,17 +47,26 @@ const UpsertBook: FC<PropType> = ({isBookModalOpen, setIsBookModalOpen, bookItem
 
   async function submitBook(booKData: CreateBookDto) {
     try {
-      await createBook(booKData);
+      if (bookItem) {
+        await updateBook(bookItem.id, booKData);
+      } else {
+        await createBook(booKData);
+      }
+
       messageApi.open({
         type: 'success',
-        content: 'Book created!',
+        content: `Book ${bookItem ? 'Updated' : 'Added'}!`,
       });
       setIsBookModalOpen(false);
+
+      if (onBookChange) {
+        onBookChange();
+      }
     } catch (err: any) {
       console.log(err);
       messageApi.open({
         type: 'error',
-        content: err?.response?.data?.message || 'Something went wrong creating book!',
+        content: err?.response?.data?.message || `Something went wrong ${bookItem ? 'updating' : 'adding'} book!`,
       });
     }
   }
@@ -81,25 +91,28 @@ const UpsertBook: FC<PropType> = ({isBookModalOpen, setIsBookModalOpen, bookItem
 
   useEffect(() => {
     form.setFieldValue('authors', selectedAuthors);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedAuthors]);
 
   useEffect(() => {
     form.setFieldValue('genres', selectedGenres);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedGenres]);
 
   useEffect(() => {
     if (bookItem) {
       form.setFields([
-        { name: 'title', value: bookItem.title },
-        { name: 'year', value: bookItem.publisher },
-        { name: 'authors', value: bookItem.authors.map(author => ({ label: author.name, value: author.id })) },
-        { name: 'genres', value: bookItem.genres.map(genre => ({ label: genre.name, value: genre.id })) },
-        { name: 'publisher', value: bookItem.publisher },
-        { name: 'summary', value: bookItem.summary },
+        {name: 'title', value: bookItem.title},
+        {name: 'year', value: dayjs().year(bookItem.publicationYear)},
+        {name: 'authors', value: bookItem.authors.map(author => ({label: author.name, value: author.id}))},
+        {name: 'genres', value: bookItem.genres.map(genre => ({label: genre.name, value: genre.id}))},
+        {name: 'publisher', value: bookItem.publisher},
+        {name: 'summary', value: bookItem.summary},
       ]);
     } else {
       form.resetFields();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [bookItem]);
 
   return (

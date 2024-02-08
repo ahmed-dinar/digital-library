@@ -5,6 +5,7 @@ import {Inter} from "next/font/google";
 import "./globals.css";
 import 'animate.css';
 import AppLayout from "@/components/Layout";
+import LibraryProvider from "@/components/Library/LibraryContext/LibraryContext";
 
 const inter = Inter({subsets: ["latin"]});
 
@@ -21,11 +22,11 @@ export default function RootLayout({
   return (
     <html lang="en">
     <body className={inter.className}>
-      <AntdRegistry>
-        <AppLayout>
-          {children}
-        </AppLayout>
-      </AntdRegistry>
+    <AntdRegistry>
+      <AppLayout>
+        {children}
+      </AppLayout>
+    </AntdRegistry>
     </body>
     </html>
   );

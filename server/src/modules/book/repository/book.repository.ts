@@ -129,7 +129,7 @@ export class BookRepository {
 
     if (filterDto?.title) {
       where.title = {
-        startsWith: filterDto.title,
+        contains: filterDto.title,
         mode: 'insensitive',
       };
     }
@@ -170,6 +170,18 @@ export class BookRepository {
           },
         },
       };
+    } else if (filterDto?.authorId) {
+      const authorIds = filterDto?.authorId.split(',').map(id => parseInt(id));
+
+      where.authors = {
+        some: {
+          author: {
+            id: {
+              in: authorIds
+            },
+          },
+        },
+      };
     }
 
     if (filterDto?.genre) {
@@ -182,15 +194,29 @@ export class BookRepository {
           },
         },
       };
+    } else if (filterDto?.genreId) {
+      const genreIds = filterDto?.genreId.split(',').map(id => parseInt(id));
+
+      where.genres = {
+        some: {
+          genre: {
+            id: {
+              in: genreIds
+            },
+          },
+        },
+      };
     }
+
+    const sort = sortDto?._sort && sortDto._sort.length > 0 ? {
+      orderBy: sortDto._sort.map((s: any) => ({ [s.property]: s.direction })),
+    } : {};
 
     const query: Prisma.BookFindManyArgs = {
       skip: Math.max(page - 1, 0) * limit,
       take: limit,
       where,
-      ...(sortDto?.sort && {
-        orderBy: sortDto.sort.map((s) => ({ [s.property]: s.direction })),
-      }),
+      ...sort,
       include: {
         authors: {
           include: {
@@ -205,6 +231,8 @@ export class BookRepository {
         editions: true,
       },
     };
+
+    console.log('query ', query);
 
     const [books, count] = await this.prisma.$transaction([
       this.prisma.book.findMany(query),

@@ -28,7 +28,15 @@ export class BookFilterDto {
 
   @IsString()
   @IsOptional()
+  authorId?: string;
+
+  @IsString()
+  @IsOptional()
   genre?: string;
+
+  @IsString()
+  @IsOptional()
+  genreId?: string;
 
   @IsString()
   @IsOptional()

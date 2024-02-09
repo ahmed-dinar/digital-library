@@ -7,6 +7,8 @@ import UpsertBook from "@/components/UpsertBook/UpsertBook";
 import {useRouter} from "next/navigation";
 import Link from "next/link";
 import SearchBook from "@/components/SearchBook/SearchBook";
+import {antonFont} from "@/app/fonts";
+import { FiBookOpen } from "react-icons/fi";
 
 const {Header} = Layout;
 
@@ -16,23 +18,26 @@ const HeaderLayout: FC = () => {
 
   return (
     <Header className="bg-white sticky top-0 z-50 w-full flex border-b border-solid border-gray-200 h-20">
-      <div className="w-3/4 border-0 mx-auto h-full flex items-center justify-between">
+      <div className="container px-40 border-0 mx-auto h-full flex items-center">
 
-        <div className="flex shrink-0 w-56 border-0 justify-center">
+        <div className="flex shrink-0 w-56 border-0 justify-start pl-2">
           <Link href="/" scroll={false}>
-            <h2 className="text-xl font-bold align-middle inline-block pb-2 cursor-pointer text-gray-800">
-              Bibliotheca
-            </h2>
+            <div className="flex flex-row">
+              <FiBookOpen size={32} className="text-gray-900 mr-1" />
+              <h2 className={'text-xl align-middle inline-block pb-2 cursor-pointer text-gray-800 ' + antonFont.className}>
+                Bibliotheca
+              </h2>
+            </div>
           </Link>
         </div>
 
         <div className="flex flex-auto border-0 justify-center">
-          <div className="w-96">
+          <div>
             <SearchBook/>
           </div>
         </div>
 
-        <div className="w-72 flex shrink-0 justify-center">
+        <div className="w-72 flex shrink-0 justify-end">
           <Button
             type="default"
             icon={<PlusCircleOutlined/>}

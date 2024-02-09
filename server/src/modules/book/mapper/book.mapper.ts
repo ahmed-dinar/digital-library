@@ -67,7 +67,7 @@ export class BookMapper {
       publisher: createBookDto.publisher,
     } as Prisma.BookCreateInput;
 
-    if (createBookDto.authorIds && createBookDto.authorIds?.length > 0) {
+    if (createBookDto.authorIds && createBookDto.authorIds.length > 0) {
       data.authors = {
         create: createBookDto.authorIds.map((authorId) => ({
           author: {
@@ -105,9 +105,17 @@ export class BookMapper {
 
   /**
    *
+   * @param id
    * @param updateBookDto
+   * @param existingAuthors
+   * @param existingGenres
    */
-  fromUpdateDtoToEntity(updateBookDto: UpdateBookDto): Prisma.BookUpdateInput {
+  fromUpdateDtoToEntity(
+    id: number,
+    updateBookDto: UpdateBookDto,
+    existingAuthors: Set<number>,
+    existingGenres: Set<number>,
+  ): Prisma.BookUpdateInput {
     const updateInput: Prisma.BookUpdateInput = {};
 
     if (updateBookDto.title) {
@@ -124,6 +132,57 @@ export class BookMapper {
 
     if (updateInput.publisher) {
       updateInput.publisher = updateBookDto.publisher;
+    }
+
+    if (updateBookDto.authorIds && updateBookDto.authorIds.length > 0) {
+      const newAuthors = updateBookDto.authorIds.filter(
+        (authorId) => !existingAuthors.has(authorId),
+      );
+      const deletedAuthors = Array.from(existingAuthors).filter(
+        (authorId) => !updateBookDto.authorIds?.includes(authorId),
+      );
+
+      updateInput.authors = {
+        create: newAuthors.map((authorId) => ({
+          authorId,
+        })),
+        delete: deletedAuthors.map((authorId) => ({
+          bookId_authorId: {
+            authorId,
+            bookId: id,
+          },
+        })),
+      };
+    }
+
+    if (updateBookDto.genreIds && updateBookDto.genreIds.length > 0) {
+      const newAuthors = updateBookDto.genreIds.filter(
+        (genreId) => !existingGenres.has(genreId),
+      );
+      const deletedGenres = Array.from(existingGenres).filter(
+        (genreId) => !updateBookDto.genreIds?.includes(genreId),
+      );
+
+      updateInput.genres = {
+        create: newAuthors.map((genreId) => ({
+          genreId,
+        })),
+        delete: deletedGenres.map((genreId) => ({
+          bookId_genreId: {
+            genreId,
+            bookId: id,
+          },
+        })),
+      };
+    } else if (existingGenres.size > 0) {
+      updateInput.genres = {
+        delete: Array.from(existingGenres).map((genreId) => ({
+          bookId_genreId: {
+            genreId,
+            bookId: id,
+          },
+        })),
+      };
     }
 
     return updateInput;

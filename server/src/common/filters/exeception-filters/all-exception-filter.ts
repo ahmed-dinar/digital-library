@@ -7,9 +7,9 @@ import {
   NotFoundException,
 } from '@nestjs/common';
 
-import {APIError, APIException} from '../../exception/api.exception';
-import {ExceptionFormatter} from '../../exception/exception-formatter';
-import {Prisma} from '@prisma/client';
+import { APIError, APIException } from '../../exception/api.exception';
+import { ExceptionFormatter } from '../../exception/exception-formatter';
+import { Prisma } from '@prisma/client';
 
 @Catch()
 export class AllExceptionsFilter<T> implements ExceptionFilter {
@@ -33,13 +33,13 @@ export class AllExceptionsFilter<T> implements ExceptionFilter {
     } else if (exception instanceof Prisma.PrismaClientKnownRequestError) {
       // Prisma database error
       const ex = ExceptionFormatter.formatPrismaError(exception);
-      error = {message: ex.message};
+      error = { message: ex.message };
       status = ex.httpStatus;
     } else if (
       exception instanceof Prisma.PrismaClientUnknownRequestError ||
       exception instanceof Prisma.PrismaClientValidationError
     ) {
-      error = {message: exception.message};
+      error = { message: exception.message };
       status = HttpStatus.INTERNAL_SERVER_ERROR;
     } else if (exception instanceof NotFoundException) {
       error = ExceptionFormatter.formatNotFoundException(exception);

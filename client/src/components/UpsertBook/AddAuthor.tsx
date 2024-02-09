@@ -38,6 +38,7 @@ const AddAuthor: FC<PropType> = ({authors, value, setValue}) => {
         content: 'Author added!',
       });
       setName('');
+      fetchAuthors();
     } catch (err: any) {
       console.log(err);
       messageApi.open({
@@ -82,7 +83,7 @@ const AddAuthor: FC<PropType> = ({authors, value, setValue}) => {
               />
               <Button type="text" icon={<PlusOutlined/>} onClick={addItem}
                       className="hover:bg-neutral-800 hover:text-slate-100">
-                Add author
+                Add new author
               </Button>
             </Space>
           </>

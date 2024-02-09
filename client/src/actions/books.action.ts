@@ -1,16 +1,19 @@
 import {coreAxios} from "@/api/axios";
 import {ItemListDto, PageQueryDto} from "@/types/common.types";
-import {BookDto, CreateBookDto} from "@/types/book.types";
+import {BookDto, BookQueryDto, CreateBookDto} from "@/types/book.types";
+import {toQueryParams} from "@/utils/query-urils";
 
 /**
  * Get book list
  */
 export const getBooks = async ({page, queryParams}: {
   page: PageQueryDto,
-  queryParams?: string
+  queryParams?: BookQueryDto[]
 }): Promise<ItemListDto<BookDto>> => {
+  let params = toQueryParams(queryParams);
+
   try {
-    return (await coreAxios.get(`/books/list?page=${page.page}&limit=${page.limit}${queryParams ? ('&' + queryParams) : ''}`, {})).data;
+    return (await coreAxios.get(`/books/list?page=${page.page}&limit=${page.limit}${params ? ('&' + params) : ''}`, {})).data;
   } catch (ex: any) {
     throw ex;
   }
@@ -60,6 +63,31 @@ export const updateBook = async (id: number, book: Partial<CreateBookDto>): Prom
 export const deleteBook = async (id: number): Promise<void> => {
   try {
     await coreAxios.delete(`/books/${id}`);
+  } catch (ex: any) {
+    throw ex;
+  }
+};
+
+/**
+ *
+ * @param id
+ */
+export const seedBook = async (): Promise<void> => {
+  try {
+    await coreAxios.post(`/books/seed`, {});
+  } catch (ex: any) {
+    throw ex;
+  }
+};
+
+
+/**
+ *
+ * @param id
+ */
+export const clearBookSeed = async (): Promise<void> => {
+  try {
+    await coreAxios.post(`/books/seed/clear`, {});
   } catch (ex: any) {
     throw ex;
   }

@@ -1,7 +1,7 @@
 import React, {FC, useState} from "react";
 import {BookDto} from "@/types/book.types";
-import {Dropdown, MenuProps, message} from "antd";
-import {DeleteOutlined, EditOutlined, SmallDashOutlined} from "@ant-design/icons";
+import {Button, Dropdown, MenuProps, message, Modal} from "antd";
+import {DeleteOutlined, EditOutlined, ExclamationCircleOutlined, SmallDashOutlined} from "@ant-design/icons";
 import {deleteBook} from "@/actions/books.action";
 import UpsertBook from "@/components/UpsertBook/UpsertBook";
 
@@ -14,7 +14,7 @@ const bookActionItems: MenuProps['items'] = [
   {
     key: 'edit',
     label: 'Edit',
-    icon: <EditOutlined/>
+    icon: <EditOutlined/>,
   },
   {
     key: 'delete',
@@ -22,6 +22,8 @@ const bookActionItems: MenuProps['items'] = [
     icon: <DeleteOutlined/>
   }
 ];
+
+const {confirm} = Modal;
 
 const BookAction: FC<PropType> = ({book, onBookChange}) => {
   const [messageApi, contextHolder] = message.useMessage();
@@ -31,9 +33,7 @@ const BookAction: FC<PropType> = ({book, onBookChange}) => {
     console.log(`Edit book: `, book);
   }
 
-  async function deleteABook(book: BookDto) {
-    console.log(`Delete book: `, book);
-
+  async function doDeleteABook(book: BookDto) {
     try {
       await deleteBook(book.id);
       messageApi.open({
@@ -48,6 +48,30 @@ const BookAction: FC<PropType> = ({book, onBookChange}) => {
         content: err?.response?.data?.message || 'Something went wrong deleting book!',
       });
     }
+  }
+
+  async function deleteABook(book: BookDto) {
+    console.log(`Delete book: `, book);
+
+    confirm({
+      icon: <ExclamationCircleOutlined/>,
+      content: (
+        <div>
+          <h3 className="text-base font-bold text-rose-600">
+            Confirm delete?
+          </h3>
+          <p className="text-normal font-normal text-gray-500">
+            Once deleted, it cannot be undone.
+          </p>
+        </div>
+      ),
+      onOk() {
+        doDeleteABook(book);
+      },
+      onCancel() {
+        console.log('Cancel');
+      },
+    });
   }
 
   const onBookActionClick = async (action: string, book: BookDto) => {
@@ -76,7 +100,8 @@ const BookAction: FC<PropType> = ({book, onBookChange}) => {
       >
         <SmallDashOutlined/>
       </Dropdown>
-      <UpsertBook isBookModalOpen={isBookModalOpen} setIsBookModalOpen={setIsBookModalOpen} bookItem={book} onBookChange={onBookChange} />
+      <UpsertBook isBookModalOpen={isBookModalOpen} setIsBookModalOpen={setIsBookModalOpen} bookItem={book}
+                  onBookChange={onBookChange}/>
     </>
   );
 };

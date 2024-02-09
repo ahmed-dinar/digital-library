@@ -7,9 +7,12 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 
-    --font-mono: 'Inter', ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
-      "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
-      "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+    /*--font-mono: 'Inter', ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",*/
+    /*  "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",*/
+    /*  "Fira Mono", "Droid Sans Mono", "Courier New", monospace;*/
+  /*font-family: 'Inter', ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",*/
+  /*"Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",*/
+  /*"Fira Mono", "Droid Sans Mono", "Courier New", monospace !important;*/
 }
 
 @media (prefers-color-scheme: dark) {
@@ -29,6 +32,12 @@ body {
   )
   rgb(var(--background-start-rgb));
 }
+
+/*html, body {*/
+/*  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,*/
+/*  'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',*/
+/*  'Noto Color Emoji' !important;*/
+/*}*/
 
 @layer utilities {
   .text-balance {
@@ -55,6 +64,10 @@ body {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #9ca3af;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-poppins);
 }
 
 /*:root {*/

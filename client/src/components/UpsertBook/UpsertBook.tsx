@@ -134,7 +134,6 @@ const UpsertBook: FC<PropType> = ({isBookModalOpen, setIsBookModalOpen, bookItem
           </Space>
         }
       >
-
         <Form
           {...layout}
           name={'book-form'}
@@ -206,6 +205,7 @@ const UpsertBook: FC<PropType> = ({isBookModalOpen, setIsBookModalOpen, bookItem
             <Button
               type="primary"
               htmlType="submit"
+              size={'large'}
             >
               {bookItem ? 'Update' : 'Add'}
             </Button>

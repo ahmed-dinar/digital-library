@@ -171,13 +171,15 @@ export class BookRepository {
         },
       };
     } else if (filterDto?.authorId) {
-      const authorIds = filterDto?.authorId.split(',').map(id => parseInt(id));
+      const authorIds = filterDto?.authorId
+        .split(',')
+        .map((id) => parseInt(id));
 
       where.authors = {
         some: {
           author: {
             id: {
-              in: authorIds
+              in: authorIds,
             },
           },
         },
@@ -195,22 +197,27 @@ export class BookRepository {
         },
       };
     } else if (filterDto?.genreId) {
-      const genreIds = filterDto?.genreId.split(',').map(id => parseInt(id));
+      const genreIds = filterDto?.genreId.split(',').map((id) => parseInt(id));
 
       where.genres = {
         some: {
           genre: {
             id: {
-              in: genreIds
+              in: genreIds,
             },
           },
         },
       };
     }
 
-    const sort = sortDto?._sort && sortDto._sort.length > 0 ? {
-      orderBy: sortDto._sort.map((s: any) => ({ [s.property]: s.direction })),
-    } : {};
+    const sort =
+      sortDto?._sort && sortDto._sort.length > 0
+        ? {
+            orderBy: sortDto._sort.map((s: any) => ({
+              [s.property]: s.direction,
+            })),
+          }
+        : {};
 
     const query: Prisma.BookFindManyArgs = {
       skip: Math.max(page - 1, 0) * limit,

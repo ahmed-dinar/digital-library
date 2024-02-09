@@ -1,16 +1,22 @@
 'use client'
 
-import React, {FC, useEffect, useState} from "react";
-import {Button, Card, Divider, Flex, Pagination, Space, Typography} from "antd";
-import {PlusCircleOutlined} from "@ant-design/icons";
+import React, {FC, useContext, useEffect, useState} from "react";
 import {getBooks} from "@/actions/books.action";
-import {ItemListDto, PaginationDto} from "@/types/common.types";
+import {PaginationDto} from "@/types/common.types";
 import {BookDto} from "@/types/book.types";
 
-const {Title, Text} = Typography;
+import LeftSideBar from "@/components/Home/LeftSideBar/LeftSideBar";
+import RightSideBar from "@/components/Home/RightSideBar/RightSideBar";
+import BookList from "@/components/Home/BookList/BookList";
+import {LibraryContext, LibraryContextType} from "@/components/Library/LibraryContext/LibraryContext";
+import {Skeleton} from "antd";
+import {useSearchParams} from "next/navigation";
 
 const HomeComponent: FC = () => {
+  const searchParams = useSearchParams();
+  const [booksLoading, setBooksLoading] = useState<boolean>(true);
   const [books, setBooks] = useState<BookDto[]>([]);
+  const {authors, genres} = useContext<LibraryContextType>(LibraryContext);
   const [pagination, setPagination,] = useState<PaginationDto>({
     hasNext: false,
     hasPrevious: false,
@@ -20,8 +26,23 @@ const HomeComponent: FC = () => {
   });
 
   function fetchBooks(page: number, limit: number) {
+    const params: { key: string, value: string }[] = [];
+
+    searchParams.forEach((value, key) => {
+      // We are manging page and limit internally
+      // lets just send all other query params to backend
+      if (key != 'page' && key != 'limit') {
+        params.push({key, value});
+      }
+    });
+
+    const queryParams = params
+      .map(({key, value}) => `${encodeURIComponent(key)}=${encodeURIComponent(value)}`)
+      .join('&');
+
     getBooks({
-      page: {page, limit}
+      page: {page, limit},
+      queryParams
     })
       .then(books => {
         console.log(books);
@@ -30,16 +51,13 @@ const HomeComponent: FC = () => {
       })
       .catch(err => {
         console.log(err);
-      });
+      }).finally(() => setBooksLoading(false));
   }
 
   useEffect(() => {
     fetchBooks(pagination.page, pagination.limit);
-  }, []);
-
-  // useEffect(() => {
-  //   fetchBooks();
-  // }, [pagination]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchParams]);
 
   function onPaginationChange(page: number, pageSize: number) {
     setPagination({...pagination, page, limit: pageSize});
@@ -48,57 +66,22 @@ const HomeComponent: FC = () => {
 
   return (
     <>
-      <div style={{display: 'flex', flexDirection: 'row'}}>
-        <div style={{display: 'flex', flex: '1', paddingRight: '20px'}}>
-          <Flex gap="middle" vertical>
-            <div>
-              <Text style={{fontSize: '18px', fontWeight: '700'}}>
-                Add book <Button type="text" shape="circle" icon={<PlusCircleOutlined/>} size={'middle'}/>
-              </Text>
-            </div>
-            <Divider style={{margin: '2px'}}/>
-            <div>
-              <Space direction="vertical" size={16}>
-                {books.map((book, index) => (
-                  <div key={book.id} className={'animate__animated animate__fadeIn'}>
-                    <Card title={book.title}>
-                      <Text>{book.summary}</Text>
-                    </Card>
-                  </div>
-                ))}
-              </Space>
-            </div>
-            <div style={{marginTop: '20px'}}>
-              {pagination.totalItems > 0 ? (
-                <Pagination
-                  showSizeChanger
-                  // onShowSizeChange={(current, size) => }
-                  defaultCurrent={1}
-                  total={pagination.totalItems}
-                  pageSize={pagination.limit}
-                  size={'small'}
-                  onChange={onPaginationChange}
-                />
-              ) : null}
-            </div>
-          </Flex>
+      <h1>{searchParams}</h1>
+      <div className="flex flex-row">
+
+        <div className="flex shrink-0 w-56 bg-transparent flex-col border-r border-solid border-gray-200">
+          <LeftSideBar authors={authors}/>
         </div>
 
-        <div style={{
-          display: 'flex',
-          borderRadius: '10px',
-          background: '#ffffff',
-          minHeight: '70%',
-          width: '280px'
-        }}>
-          <Flex gap="middle" vertical>
-            <div style={{textAlign: 'center'}}>
-              <Text style={{fontSize: '16px', fontWeight: '700'}}>
-                Filters
-              </Text>
-            </div>
-          </Flex>
+        <div className="flex flex-auto px-5">
+          <BookList authors={authors} genres={genres} books={books} pagination={pagination}
+                    onPaginationChange={onPaginationChange}/>
         </div>
+
+        <div className="bg-transparent w-72 flex shrink-0 flex-col">
+          <RightSideBar authors={authors} genres={genres}/>
+        </div>
+
       </div>
     </>
   );

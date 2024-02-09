@@ -9,7 +9,7 @@ export const createGenre = async (genre: CreateGenreDto): Promise<GenreDto> => {
   try {
     return (await coreAxios.post('/genres', genre)).data;
   } catch (ex: any) {
-    throw new ex;
+    throw ex;
   }
 };
 
@@ -24,7 +24,7 @@ export const searchGenre = async (term: string): Promise<GenreDto[]> => {
       }
     })).data;
   } catch (ex: any) {
-    throw new ex;
+    throw ex;
   }
 };
 
@@ -39,6 +39,6 @@ export const getGenres = async (pageQuery: PageQueryDto): Promise<ItemListDto<Ge
       }
     })).data;
   } catch (ex: any) {
-    throw new ex;
+    throw ex;
   }
 };

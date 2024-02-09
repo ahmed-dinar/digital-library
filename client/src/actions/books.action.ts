@@ -1,29 +1,18 @@
 import {coreAxios} from "@/api/axios";
-import {ItemListDto, PageQueryDto, SortOptionDto} from "@/types/common.types";
-import {BookDto, BookFilterDto, CreateBookDto} from "@/types/book.types";
+import {ItemListDto, PageQueryDto} from "@/types/common.types";
+import {BookDto, CreateBookDto} from "@/types/book.types";
 
 /**
  * Get book list
  */
-export const getBooks = async ({page, filters, sort}: {
+export const getBooks = async ({page, queryParams}: {
   page: PageQueryDto,
-  filters?: BookFilterDto,
-  sort?: SortOptionDto[]
+  queryParams?: string
 }): Promise<ItemListDto<BookDto>> => {
-  const params = {
-    ...page,
-    ...(filters && Object.fromEntries(
-      Object.entries(filters).filter(([_, value]) => !!value)
-    )),
-    ...(sort && sort.map(sortOption => ({sort: `${sortOption.property},${sortOption.direction}`})))
-  };
-
-  console.log(params);
-
   try {
-    return (await coreAxios.get('/books/list', {params})).data;
+    return (await coreAxios.get(`/books/list?page=${page.page}&limit=${page.limit}${queryParams ? ('&' + queryParams) : ''}`, {})).data;
   } catch (ex: any) {
-    throw new ex;
+    throw ex;
   }
 };
 
@@ -35,7 +24,19 @@ export const createBook = async (book: CreateBookDto): Promise<BookDto> => {
   try {
     return (await coreAxios.post('/books', book)).data;
   } catch (ex: any) {
-    throw new ex;
+    throw ex;
+  }
+};
+
+/**
+ *
+ * @param bookId
+ */
+export const getBookById = async (bookId: string): Promise<BookDto> => {
+  try {
+    return (await coreAxios.get(`/books/${bookId}`)).data;
+  } catch (ex: any) {
+    throw ex;
   }
 };
 
@@ -48,7 +49,7 @@ export const updateBook = async (id: number, book: Partial<CreateBookDto>): Prom
   try {
     return (await coreAxios.patch(`/books/${id}`, book)).data;
   } catch (ex: any) {
-    throw new ex;
+    throw ex;
   }
 };
 
@@ -60,6 +61,6 @@ export const deleteBook = async (id: number): Promise<void> => {
   try {
     await coreAxios.delete(`/books/${id}`);
   } catch (ex: any) {
-    throw new ex;
+    throw ex;
   }
 };

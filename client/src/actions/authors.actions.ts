@@ -9,7 +9,7 @@ export const createAuthor = async (author: CreateAuthorDto): Promise<AuthorDto> 
   try {
     return (await coreAxios.post('/authors', author)).data;
   } catch (ex: any) {
-    throw new ex;
+    throw ex;
   }
 };
 
@@ -24,7 +24,7 @@ export const searchAuthor = async (term: string): Promise<AuthorDto[]> => {
       }
     })).data;
   } catch (ex: any) {
-    throw new ex;
+    throw ex;
   }
 };
 
@@ -39,6 +39,6 @@ export const getAuthors = async (pageQuery: PageQueryDto): Promise<ItemListDto<A
       }
     })).data;
   } catch (ex: any) {
-    throw new ex;
+    throw ex;
   }
 };

@@ -52,6 +52,11 @@ export class SortOptionDto {
       return { property, direction };
     });
   }
+
+  static parseFromString(param: string): SortOptionDto {
+    const [property, direction] = param.split(',');
+    return { property, direction };
+  }
 }
 
 /**
@@ -67,8 +72,10 @@ export class SortDto {
 
   // Transform the sort parameter into an array of SortOptionDto
   @IsOptional()
-  set sort(sortArray: SortOptionDto[]) {
-    this._sort = SortOptionDto.parseFromArray(sortArray as any);
+  set sort(sortArray: any) {
+    this._sort = Array.isArray(sortArray)
+      ? SortOptionDto.parseFromArray(sortArray as any)
+      : [SortOptionDto.parseFromString(sortArray)];
   }
 }
 
@@ -82,6 +89,6 @@ export class PageQueryDto {
   @IsOptional()
   @IsInt()
   @Min(1)
-  @Max(100)
+  @Max(5000)
   limit: number = 10;
 }

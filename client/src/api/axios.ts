@@ -1,8 +1,5 @@
 import axios from 'axios';
 
-console.log('process.env.CORE_API_URL ', process.env.NEXT_PUBLIC_CORE_API_URL);
-console.log('process.env.CORE_API_URL ', process.env.NEXT_PUBLIC_CORE_API_TIMEOUT);
-
 export const coreAxios = axios.create({
   baseURL: process.env.NEXT_PUBLIC_CORE_API_URL,
   timeout: parseInt(process.env.NEXT_PUBLIC_CORE_API_TIMEOUT as string, 10),

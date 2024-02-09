@@ -25,7 +25,7 @@ const LeftSideBar: FC<PropType> = ({authors}) => {
           {authors.length > 0 ? (
             <div>
               {authors.map(author => (
-                <div key={author.id} className="w-full mt-1">
+                <div key={author.id} className="w-auto mt-1">
                   <Button
                     type={'text'}
                     className="w-full text-left"

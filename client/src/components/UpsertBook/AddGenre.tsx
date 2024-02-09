@@ -38,6 +38,7 @@ const AddGenre: FC<PropType> = ({genres, value, setValue}) => {
         content: 'Author added!',
       });
       setName('');
+      fetchGenres();
     } catch (err: any) {
       console.log(err);
       console.log(err?.response);
@@ -83,7 +84,7 @@ const AddGenre: FC<PropType> = ({genres, value, setValue}) => {
               />
               <Button type="text" icon={<PlusOutlined/>} onClick={addItem}
                       className="hover:bg-neutral-800 hover:text-slate-100">
-                Add genre
+                Add new genre
               </Button>
             </Space>
           </>

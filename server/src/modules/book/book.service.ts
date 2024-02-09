@@ -96,8 +96,20 @@ export class BookService {
   async update(id: number, updateBookDto: UpdateBookDto): Promise<BookDto> {
     const book = await this.getById(id);
 
+    const existingAuthors = new Set(
+      book.authors.map((bookAuthor) => bookAuthor.author.id),
+    );
+    const existingGenres = new Set(
+      book.genres.map((bookGenre) => bookGenre.genre.id),
+    );
+
     const updateData: Prisma.BookUpdateInput =
-      this.bookMapper.fromUpdateDtoToEntity(updateBookDto);
+      this.bookMapper.fromUpdateDtoToEntity(
+        id,
+        updateBookDto,
+        existingAuthors,
+        existingGenres,
+      );
 
     const updatedBook = await this.bookRepository.update(book.id, updateData);
 

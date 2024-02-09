@@ -12,13 +12,27 @@ export interface BookDto {
   editions: BookEditionDto[];
 }
 
-export interface BookFilterDto {
-  title?: string;
-  isbn?: string;
-  author?: string;
-  genre?: string;
-  publisher?: string;
-  publicationYear?: number;
+export enum BookQueryType {
+  FILTER,
+  SORT
+}
+
+export const BookQueryKey: { [k: string]: BookQueryType } = {
+  title: BookQueryType.FILTER,
+  isbn: BookQueryType.FILTER,
+  author: BookQueryType.FILTER,
+  authorId: BookQueryType.FILTER,
+  genre: BookQueryType.FILTER,
+  genreId: BookQueryType.FILTER,
+  publisher: BookQueryType.FILTER,
+  publicationYear: BookQueryType.FILTER,
+  sort: BookQueryType.SORT,
+};
+
+export interface BookQueryDto {
+  key: string,
+  value: string,
+  type: BookQueryType
 }
 
 export interface BookEditionDto {

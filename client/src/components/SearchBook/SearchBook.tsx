@@ -3,8 +3,8 @@
 import React, {FC, useState} from "react";
 import {AutoComplete, Button, Input, SelectProps} from "antd";
 import {getBooks} from "@/actions/books.action";
-import {debounce} from 'lodash';
 import {useRouter} from "next/navigation";
+import {BookQueryType} from "@/types/book.types";
 
 const {Search} = Input;
 
@@ -19,7 +19,11 @@ const SearchBook: FC<PropType> = ({}) => {
     try {
       const books = await getBooks({
         page: {page: 1, limit: 10},
-        queryParams: `title=${query}`
+        queryParams: [{
+          key: 'title',
+          value: query,
+          type: BookQueryType.FILTER
+        }]
       });
       return books.items.map((book, index) => ({
         value: book.id,

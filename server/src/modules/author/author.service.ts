@@ -1,13 +1,16 @@
-import {HttpStatus, Injectable, Logger} from '@nestjs/common';
+import { HttpStatus, Injectable, Logger } from '@nestjs/common';
 
-import {CreateAuthorDto} from './dto/create-author.dto';
-import {UpdateAuthorDto} from './dto/update-author.dto';
-import {AuthorDto} from './dto/author.dto';
-import {AuthorRepository} from './repository/author.repository';
-import {AuthorMapper} from './mapper/author.mapper';
-import {Author, Prisma} from '@prisma/client';
-import {APIException} from '../../common/exception/api.exception';
-import {PageQueryDto, PaginationDto} from "../../common/interfaces/query.interfaces";
+import { CreateAuthorDto } from './dto/create-author.dto';
+import { UpdateAuthorDto } from './dto/update-author.dto';
+import { AuthorDto } from './dto/author.dto';
+import { AuthorRepository } from './repository/author.repository';
+import { AuthorMapper } from './mapper/author.mapper';
+import { Author, Prisma } from '@prisma/client';
+import { APIException } from '../../common/exception/api.exception';
+import {
+  PageQueryDto,
+  PaginationDto,
+} from '../../common/interfaces/query.interfaces';
 
 @Injectable()
 export class AuthorService {
@@ -16,8 +19,7 @@ export class AuthorService {
   constructor(
     private authorRepository: AuthorRepository,
     private authorMapper: AuthorMapper,
-  ) {
-  }
+  ) {}
 
   /**
    *
@@ -56,7 +58,10 @@ export class AuthorService {
    * @param pageDto
    */
   async list(pageDto: PageQueryDto) {
-    const authors = await this.authorRepository.list(pageDto.page, pageDto.limit);
+    const authors = await this.authorRepository.list(
+      pageDto.page,
+      pageDto.limit,
+    );
 
     return {
       items: this.authorMapper.fromEntityListToDto(authors.items),

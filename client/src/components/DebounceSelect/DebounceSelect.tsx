@@ -19,7 +19,7 @@ function DebounceSelect<ValueType extends {
   key?: string;
   label: React.ReactNode;
   value: string | number
-} = any, >({fetchOptions, debounceTimeout = 800, ...props}: DebounceSelectProps<ValueType>) {
+} = any, >({fetchOptions, debounceTimeout = 500, ...props}: DebounceSelectProps<ValueType>) {
   const [fetching, setFetching] = useState(false);
   const [options, setOptions] = useState<ValueType[]>([]);
   const fetchRef = useRef(0);
@@ -47,10 +47,10 @@ function DebounceSelect<ValueType extends {
 
   return (
     <Select
+      showSearch
       labelInValue
       filterOption={false}
       onSearch={debounceFetcher}
-      notFoundContent={fetching ? <Spin size="small"/> : null}
       {...props}
       options={options}
     />

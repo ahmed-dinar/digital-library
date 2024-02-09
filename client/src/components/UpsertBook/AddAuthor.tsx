@@ -19,6 +19,7 @@ const AddAuthor: FC<PropType> = ({authors, value, setValue}) => {
   const inputRef = useRef<InputRef>(null);
   const [name, setName] = useState('');
   const [messageApi, contextHolder] = message.useMessage();
+  const [loading, setLoading] = useState<boolean>(false);
 
   const onNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setName(event.target.value);
@@ -30,6 +31,8 @@ const AddAuthor: FC<PropType> = ({authors, value, setValue}) => {
     if (!name) {
       return;
     }
+
+    setLoading(true);
 
     try {
       await createAuthor({name});
@@ -46,11 +49,11 @@ const AddAuthor: FC<PropType> = ({authors, value, setValue}) => {
         content: err?.response?.data?.message || 'Something went wrong creating book!',
       });
     }
+
+    setLoading(false);
   };
 
   async function fetchAuthorList(authorName: string): Promise<SelectValue[]> {
-    console.log('fetching author', authorName);
-
     return authors.filter(author => author.name.toLowerCase().startsWith(authorName.toLowerCase())).map(author => ({
       label: author.name,
       value: author.id,
@@ -81,8 +84,13 @@ const AddAuthor: FC<PropType> = ({authors, value, setValue}) => {
                 onChange={onNameChange}
                 onKeyDown={(e) => e.stopPropagation()}
               />
-              <Button type="text" icon={<PlusOutlined/>} onClick={addItem}
-                      className="hover:bg-neutral-800 hover:text-slate-100">
+              <Button
+                type="text"
+                icon={<PlusOutlined/>}
+                onClick={addItem}
+                className="hover:bg-neutral-800 hover:text-slate-100"
+                loading={loading}
+              >
                 Add new author
               </Button>
             </Space>

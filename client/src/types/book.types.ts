@@ -17,6 +17,9 @@ export enum BookQueryType {
   SORT
 }
 
+/**
+ * Supported query and filters to parse from url query params
+ */
 export const BookQueryKey: { [k: string]: BookQueryType } = {
   title: BookQueryType.FILTER,
   isbn: BookQueryType.FILTER,

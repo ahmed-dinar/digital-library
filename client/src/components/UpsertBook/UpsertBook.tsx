@@ -40,12 +40,15 @@ const UpsertBook: FC<PropType> = ({isBookModalOpen, setIsBookModalOpen, bookItem
   const [selectedAuthors, setSelectedAuthors] = useState<SelectValue[]>([]);
   const [selectedGenres, setSelectedGenres] = useState<SelectValue[]>([]);
   const [messageApi, contextHolder] = message.useMessage();
+  const [loading, setLoading] = useState<boolean>(false);
 
   const onYearChange: DatePickerProps['onChange'] = (date, dateString) => {
-    console.log(date, dateString);
+    // console.log(date, dateString);
   };
 
   async function submitBook(booKData: CreateBookDto) {
+    setLoading(true);
+
     try {
       if (bookItem) {
         await updateBook(bookItem.id, booKData);
@@ -69,10 +72,12 @@ const UpsertBook: FC<PropType> = ({isBookModalOpen, setIsBookModalOpen, bookItem
         content: err?.response?.data?.message || `Something went wrong ${bookItem ? 'updating' : 'adding'} book!`,
       });
     }
+
+    setLoading(false);
   }
 
   const onFinish = async (formFields: FormFields) => {
-    console.log(formFields);
+    // console.log(formFields);
 
     const data: CreateBookDto = {
       title: formFields.title,
@@ -206,6 +211,7 @@ const UpsertBook: FC<PropType> = ({isBookModalOpen, setIsBookModalOpen, bookItem
               type="primary"
               htmlType="submit"
               size={'large'}
+              loading={loading}
             >
               {bookItem ? 'Update' : 'Add'}
             </Button>

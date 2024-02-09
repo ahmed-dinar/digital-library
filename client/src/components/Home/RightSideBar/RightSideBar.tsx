@@ -17,7 +17,6 @@ const RightSideBar: FC<PropType> = ({authors, genres}) => {
   const router = useRouter();
 
   const onChange: GetProp<typeof Checkbox.Group, 'onChange'> = (checkedValues) => {
-    console.log('checked = ', checkedValues);
     if (checkedValues?.length > 0) {
       router.push(`/?genreId=${checkedValues.join(',')}`)
     } else {

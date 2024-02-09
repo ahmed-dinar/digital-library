@@ -25,8 +25,6 @@ const HomeComponent: FC = () => {
   });
 
   async function fetchBooks(page: number, limit: number) {
-    setBooksLoading(true);
-
     try {
       const bookList = await getBooks({
         page: {page, limit},

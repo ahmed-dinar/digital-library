@@ -250,29 +250,33 @@ export class BookRepository {
   }
 
   async deleteSeedItems(data: PreSeedData): Promise<void> {
-    await this.prisma.book.deleteMany({
-      where: {
-        title: {
-          in: data.titles,
-        },
-      },
-    });
+    await this.prisma.book.deleteMany();
+    await this.prisma.author.deleteMany();
+    await this.prisma.genre.deleteMany();
 
-    await this.prisma.author.deleteMany({
-      where: {
-        name: {
-          in: data.authors,
-        },
-      },
-    });
-
-    await this.prisma.genre.deleteMany({
-      where: {
-        name: {
-          in: data.genres,
-        },
-      },
-    });
+    // await this.prisma.book.deleteMany({
+    //   where: {
+    //     title: {
+    //       in: data.titles,
+    //     },
+    //   },
+    // });
+    //
+    // await this.prisma.author.deleteMany({
+    //   where: {
+    //     name: {
+    //       in: data.authors,
+    //     },
+    //   },
+    // });
+    //
+    // await this.prisma.genre.deleteMany({
+    //   where: {
+    //     name: {
+    //       in: data.genres,
+    //     },
+    //   },
+    // });
   }
 
   async save(data: Prisma.BookCreateInput): Promise<void> {

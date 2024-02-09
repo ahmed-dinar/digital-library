@@ -182,7 +182,9 @@ describe('BookService', () => {
       expect(books.items.length).toBeGreaterThan(0);
 
       books.items.forEach((book) => {
-        expect(book.title.toLowerCase()).toContain(bookFilterDto.title?.toLowerCase());
+        expect(book.title.toLowerCase()).toContain(
+          bookFilterDto.title?.toLowerCase(),
+        );
       });
     });
 

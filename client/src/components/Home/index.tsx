@@ -9,9 +9,10 @@ import LeftSideBar from "@/components/Home/LeftSideBar/LeftSideBar";
 import RightSideBar from "@/components/Home/RightSideBar/RightSideBar";
 import BookList from "@/components/Home/BookList/BookList";
 import {LibraryContext, LibraryContextType} from "@/components/Library/LibraryContext/LibraryContext";
-import {Skeleton} from "antd";
+import {message, Skeleton} from "antd";
 
 const HomeComponent: FC = () => {
+  const [messageApi, contextHolder] = message.useMessage();
   const [booksLoading, setBooksLoading] = useState<boolean>(true);
   const [books, setBooks] = useState<BookDto[]>([]);
   const {authors, genres, authorsLoading, genresLoading, bookQuery} = useContext<LibraryContextType>(LibraryContext);
@@ -33,6 +34,10 @@ const HomeComponent: FC = () => {
       setPagination(bookList.pagination);
     } catch (err: any) {
       console.log(err);
+      messageApi.open({
+        type: 'error',
+        content: err?.response?.data?.message || 'Something went wrong fetching books!',
+      });
     }
 
     setBooksLoading(false);
@@ -51,6 +56,7 @@ const HomeComponent: FC = () => {
 
   return (
     <>
+      {contextHolder}
       <div className="flex flex-row">
 
         <div className="flex shrink-0 w-56 bg-transparent flex-col border-r border-solid border-gray-100">

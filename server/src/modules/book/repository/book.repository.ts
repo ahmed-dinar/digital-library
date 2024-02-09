@@ -239,8 +239,6 @@ export class BookRepository {
       },
     };
 
-    console.log('query ', query);
-
     const [books, count] = await this.prisma.$transaction([
       this.prisma.book.findMany(query),
       this.prisma.book.count({

@@ -30,7 +30,7 @@ const SearchBook: FC<PropType> = ({}) => {
         label: book.title
       }));
     } catch (err: any) {
-      console.log();
+      console.log(err);
     }
     return [];
   };
@@ -46,7 +46,6 @@ const SearchBook: FC<PropType> = ({}) => {
   };
 
   const onSelect = (value: string) => {
-    console.log('onSelect', value);
     router.push(`/books/${value}`);
     setSearchOptions([]);
     setSearchValue('');

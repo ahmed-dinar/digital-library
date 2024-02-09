@@ -10,7 +10,7 @@ export const getBooks = async ({page, queryParams}: {
   page: PageQueryDto,
   queryParams?: BookQueryDto[]
 }): Promise<ItemListDto<BookDto>> => {
-  let params = toQueryParams(queryParams);
+  let params = toQueryParams(queryParams, true);
 
   try {
     return (await coreAxios.get(`/books/list?page=${page.page}&limit=${page.limit}${params ? ('&' + params) : ''}`, {})).data;

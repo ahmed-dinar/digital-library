@@ -3,7 +3,7 @@
 import React, {FC, useContext} from "react";
 import {AuthorDto} from "@/types/author.types";
 import {GenreDto} from "@/types/genre.types";
-import {Button, Divider, Empty, Image, message, Pagination, Space, Tag, Typography} from "antd";
+import {Button, Divider, Empty, Image, message, Pagination, Space, Tag} from "antd";
 
 import {FallbackImageBase64} from "@/lib/fallback.image";
 import {BookDto, BookQueryDto, BookQueryType} from "@/types/book.types";
@@ -21,8 +21,6 @@ type PropType = {
   onPaginationChange: any
 };
 
-const {Text} = Typography;
-
 const BookList: FC<PropType> = ({authors, genres, books, pagination, onPaginationChange}) => {
   const router = useRouter();
   const [messageApi, contextHolder] = message.useMessage();
@@ -35,9 +33,6 @@ const BookList: FC<PropType> = ({authors, genres, books, pagination, onPaginatio
   function sortByTitle() {
     const filters = [...bookQuery];
     let titleSort = filters.find(query => isTitleSort(query));
-
-    console.log('bookQuery ', filters);
-    console.log('titleSort ', titleSort);
 
     if (titleSort) {
       titleSort.value = `title,${titleSort.value.includes('asc') ? 'desc' : 'asc'}`;
@@ -159,11 +154,11 @@ const BookList: FC<PropType> = ({authors, genres, books, pagination, onPaginatio
                             ) : null}
 
                             <div className="pt-2.5">
-                              <p className="text-sm font-normal text-gray-500">{book.summary}</p>
+                              <p className="text-sm font-normal text-gray-500 line-clamp-3">{book.summary}</p>
                             </div>
 
                             {book.genres.length > 0 ? (
-                              <div className="mt-auto">
+                              <div className="mt-2">
                                 {book.genres.map(genre => (
                                   <Tag
                                     key={genre.id}
@@ -189,7 +184,6 @@ const BookList: FC<PropType> = ({authors, genres, books, pagination, onPaginatio
               {pagination.totalItems > 0 ? (
                 <Pagination
                   showSizeChanger
-                  // onShowSizeChange={(current, size) => }
                   defaultCurrent={1}
                   total={pagination.totalItems}
                   pageSize={pagination.limit}
@@ -202,10 +196,9 @@ const BookList: FC<PropType> = ({authors, genres, books, pagination, onPaginatio
           </>
         ) : (
           <>
-            <Empty />
+            <Empty/>
           </>
         )}
-
 
       </div>
     </>

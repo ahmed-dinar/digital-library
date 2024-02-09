@@ -53,7 +53,7 @@ export const LibraryProvider: FC<PropType> = ({children}) => {
     setAuthorsLoading(true);
     getAuthors({page: 1, limit: 5000})
       .then(authors => {
-        console.log(authors);
+        // console.log(authors);
         setAuthors(authors.items);
       })
       .catch(err => {
@@ -65,7 +65,7 @@ export const LibraryProvider: FC<PropType> = ({children}) => {
     setGenresLoading(true);
     getGenres({page: 1, limit: 5000})
       .then(genres => {
-        console.log(genres);
+        // console.log(genres);
         setGenres(genres.items);
       })
       .catch(err => {
@@ -79,7 +79,6 @@ export const LibraryProvider: FC<PropType> = ({children}) => {
   }, []);
 
   function parseFilters() {
-    console.log('parseFilters...');
     const queries: BookQueryDto[] = [];
 
     searchParams.forEach((value, key) => {
@@ -105,7 +104,7 @@ export const LibraryProvider: FC<PropType> = ({children}) => {
       router.push(`/`);
     } else {
       setBookQuery(query);
-      const params = toQueryParams(query);
+      const params = toQueryParams(query, false);
       router.push(`/?${params}`);
     }
   }

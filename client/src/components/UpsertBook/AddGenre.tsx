@@ -19,6 +19,7 @@ const AddGenre: FC<PropType> = ({genres, value, setValue}) => {
   const [name, setName] = useState('');
   const {fetchGenres} = useContext<LibraryContextType>(LibraryContext);
   const [messageApi, contextHolder] = message.useMessage();
+  const [loading, setLoading] = useState<boolean>(false);
 
   const onNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setName(event.target.value);
@@ -31,6 +32,8 @@ const AddGenre: FC<PropType> = ({genres, value, setValue}) => {
       return;
     }
 
+    setLoading(true);
+
     try {
       await createGenre({name});
       messageApi.open({
@@ -41,17 +44,17 @@ const AddGenre: FC<PropType> = ({genres, value, setValue}) => {
       fetchGenres();
     } catch (err: any) {
       console.log(err);
-      console.log(err?.response);
       messageApi.open({
         type: 'error',
         content: err?.response?.data?.message || 'Something went wrong creating book!',
       });
     }
+
+    setLoading(false);
   };
 
-  async function fetcGenreList(genreName: string): Promise<SelectValue[]> {
-    console.log('fetching genre', genreName);
-
+  async function fetchGenreList(genreName: string): Promise<SelectValue[]> {
+    // console.log('fetching genre', genreName);
     return genres.filter(genre => genre.name.toLowerCase().startsWith(genreName.toLowerCase())).map(genre => ({
       label: genre.name,
       value: genre.id,
@@ -65,7 +68,7 @@ const AddGenre: FC<PropType> = ({genres, value, setValue}) => {
         mode="multiple"
         value={value}
         placeholder="Type genre name to add"
-        fetchOptions={fetcGenreList}
+        fetchOptions={fetchGenreList}
         onChange={(newValue) => {
           setValue(newValue as SelectValue[]);
         }}
@@ -82,8 +85,13 @@ const AddGenre: FC<PropType> = ({genres, value, setValue}) => {
                 onChange={onNameChange}
                 onKeyDown={(e) => e.stopPropagation()}
               />
-              <Button type="text" icon={<PlusOutlined/>} onClick={addItem}
-                      className="hover:bg-neutral-800 hover:text-slate-100">
+              <Button
+                type="text"
+                icon={<PlusOutlined/>}
+                onClick={addItem}
+                className="hover:bg-neutral-800 hover:text-slate-100"
+                loading={loading}
+              >
                 Add new genre
               </Button>
             </Space>

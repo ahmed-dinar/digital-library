@@ -30,8 +30,10 @@ const HomeComponent: FC = () => {
         page: {page, limit},
         queryParams: bookQuery
       });
-      setBooks(bookList.items);
-      setPagination(bookList.pagination);
+      if (bookList?.items && bookList?.pagination) {
+        setBooks(bookList.items);
+        setPagination(bookList.pagination);
+      }
     } catch (err: any) {
       console.log(err);
       messageApi.open({

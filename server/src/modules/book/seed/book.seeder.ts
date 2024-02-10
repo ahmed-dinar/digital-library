@@ -17,8 +17,8 @@ export class BookSeeder {
    */
   async clear() {
     this.logger.log('Clearing seed');
-    const seedItems = this.prepareData();
-    await this.bookRepository.deleteSeedItems(seedItems);
+    // const seedItems = this.prepareData();
+    await this.bookRepository.deleteSeedItems();
   }
 
   /**
@@ -161,7 +161,9 @@ export class BookSeeder {
       authorSet.add(item.author);
       // genreSet.add(item.genre);
 
-      const genresList = item.genre.split(',').map((genreItem: string) => genreItem.trim());
+      const genresList = item.genre
+        .split(',')
+        .map((genreItem: string) => genreItem.trim());
 
       genresList.forEach((genreItem: any) => genreSet.add(genreItem));
 

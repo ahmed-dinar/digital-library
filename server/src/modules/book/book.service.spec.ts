@@ -218,9 +218,13 @@ describe('BookService', () => {
         expect(book.genres).toBeInstanceOf(Array);
         expect(book.genres.length).toBeGreaterThan(0);
 
-        book.genres.forEach((genre) => {
-          expect(genre.name).toMatch(/^Fantasy/);
-        });
+        expect(book.genres).toEqual(
+          expect.arrayContaining([
+            expect.objectContaining({
+              name: 'Fantasy',
+            }),
+          ]),
+        );
       });
     });
 

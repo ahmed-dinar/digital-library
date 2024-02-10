@@ -874,7 +874,8 @@
   },
   {
     "title": "The Tenant of Wildfell Hall",
-    "isbn": "978-0-19-284035-3","genre": "Historical Fiction",
+    "isbn": "978-0-19-284035-3",
+    "genre": "Historical Fiction",
     "publicationYear": 1848,
     "summary": "A novel challenging societal norms, depicting a woman's escape from an abusive marriage and her struggle for independence.",
     "author": "Anne Brontë",
@@ -1068,5 +1069,518 @@
     "summary": "A novel narrated by a young girl who watches from her personal heaven as her family copes with her brutal murder.",
     "genre": "Fiction",
     "publisher": "Little, Brown and Company"
+  },
+  {
+    "title": "Pather Panchali",
+    "isbn": "978-81-7011-656-2",
+    "author": "Bibhutibhushan Bandyopadhyay",
+    "publicationYear": 1936,
+    "summary": "Pather Panchali, written by Bibhutibhushan Bandyopadhyay, is a seminal work in Bengali literature. It portrays the life of the Roy family in rural Bengal and the struggles they face. The novel beautifully captures the essence of rural life, with its joys, sorrows, and everyday challenges. Through vivid descriptions and poignant storytelling, Bandyopadhyay paints a vivid picture of the landscape and the characters that inhabit it. Pather Panchali is not just a story; it's a journey into the heart of Bengal, its people, and their dreams.",
+    "genre": "Novel",
+    "publisher": "Anannya"
+  },
+  {
+    "title": "Chandranath",
+    "isbn": "978-81-7236-982-5",
+    "author": "Bibhutibhushan Bandyopadhyay",
+    "publicationYear": 1942,
+    "summary": "Chandranath is a captivating novel by Bibhutibhushan Bandyopadhyay. It tells the story of Chandranath, a young man who embarks on a journey filled with adventures and challenges. Set in rural Bengal, the novel beautifully captures the essence of the countryside and its people. Chandranath's encounters with various characters, his trials and tribulations, and his eventual triumphs make for a compelling read. Bandyopadhyay's masterful storytelling and vivid descriptions bring the world of Chandranath to life, making it a timeless classic of Bengali literature.",
+    "genre": "Novel, Adventure",
+    "publisher": "Ananda Publishers"
+  },
+  {
+    "title": "Jalsaghar",
+    "isbn": "978-81-250-2495-0",
+    "author": "Tarasankar Bandyopadhyay",
+    "publicationYear": 1937,
+    "summary": "Jalsaghar, or The Music Room, is a classic novel by Tarasankar Bandyopadhyay. It tells the story of Biswambhar Roy, a zamindar who clings to his aristocratic lifestyle despite facing financial ruin. Set in rural Bengal, the novel explores themes of class, tradition, and the decline of feudalism. Biswambhar's obsession with music and his lavish concerts at his decaying mansion, Jalsaghar, serve as a metaphor for his fading glory. Bandyopadhyay's evocative prose and vivid characterization make Jalsaghar a compelling read that offers a glimpse into a bygone era.",
+    "genre": "Novel, Drama",
+    "publisher": "Faber & Faber"
+  },
+  {
+    "title": "Grihadaha",
+    "isbn": "978-81-250-2407-3",
+    "author": "Tarasankar Bandyopadhyay",
+    "publicationYear": 1948,
+    "summary": "Grihadaha, translated as The Home and the World, is a thought-provoking novel by Tarasankar Bandyopadhyay. Set against the backdrop of the Swadeshi movement in Bengal, the novel explores the complex interplay of personal and political ideologies. The story revolves around Nikhilesh, Bimala, and Sandip, whose lives become intertwined in a web of love, loyalty, and betrayal. Bandyopadhyay skillfully delves into the psyche of his characters, offering deep insights into human nature and the societal forces that shape it. Grihadaha is a timeless masterpiece that continues to resonate with readers across generations.",
+    "genre": "Novel, Historical Fiction",
+    "publisher": "Dey's Publishing"
+  },
+  {
+    "title": "Arogya Niketan",
+    "isbn": "978-81-250-2489-9",
+    "author": "Tarasankar Bandyopadhyay",
+    "publicationYear": 1953,
+    "summary": "Arogya Niketan, translated as The Health Resort, is a poignant novel by Tarasankar Bandyopadhyay. Set in the tranquil surroundings of a health resort in the Himalayas, the novel follows the lives of its diverse inhabitants as they seek solace and healing. Through the intertwining stories of doctors, patients, and staff, Bandyopadhyay explores themes of love, loss, and redemption. The novel offers a nuanced portrayal of human relationships and the quest for inner peace. Arogya Niketan is a moving testament to the resilience of the human spirit and the transformative power of compassion.",
+    "genre": "Novel, Medical Fiction",
+    "publisher": "Dey's Publishing"
+  },
+  {
+    "title": "Seemabaddha",
+    "isbn": "978-81-7177-162-1",
+    "author": "Manik Bandopadhyay",
+    "publicationYear": 1938,
+    "summary": "Seemabaddha, or Company Limited, is a compelling novel by Manik Bandopadhyay. It tells the story of Shyamal, a young and ambitious executive who rises through the ranks in a multinational company. Set in the bustling city of Calcutta, the novel offers a scathing critique of corporate culture and the pursuit of success at any cost. As Shyamal navigates office politics and personal dilemmas, he is forced to confront the moral compromises he must make to achieve his goals. Bandopadhyay's incisive commentary and keen observations make Seemabaddha a thought-provoking read that remains relevant in today's world.",
+    "genre": "Novel, Social Commentary",
+    "publisher": "Ananda Publishers"
+  },
+  {
+    "title": "Padma Nadir Majhi",
+    "isbn": "978-81-7177-275-8",
+    "author": "Manik Bandopadhyay",
+    "publicationYear": 1936,
+    "summary": "Padma Nadir Majhi, translated as The Boatman of the River Padma, is a seminal work of Bengali literature by Manik Bandopadhyay. Set in the remote Sundarbans region of Bengal, the novel tells the story of Kuber, a fisherman who struggles to make ends meet in the harsh and unforgiving landscape. When a group of refugees arrives in the village, fleeing famine and poverty, Kuber is faced with a moral dilemma that forces him to confront his own values and beliefs. Bandopadhyay's vivid descriptions and empathetic portrayal of his characters make Padma Nadir Majhi a timeless classic that continues to resonate with readers.",
+    "genre": "Novel, Social Realism",
+    "publisher": "Ananda Publishers"
+  },
+  {
+    "title": "Diba Ratrir Kabya",
+    "isbn": "978-81-250-1346-3",
+    "author": "Manik Bandopadhyay",
+    "publicationYear": 1933,
+    "summary": "Diba Ratrir Kabya, or Midnight Poem, is a provocative novel by Manik Bandopadhyay. It explores the darker aspects of human nature and the complexities of desire, power, and morality. Set in the backdrop of a rural village in Bengal, the novel follows the lives of its inhabitants as they grapple with love, lust, and betrayal. Through vivid imagery and lyrical prose, Bandopadhyay delves into the depths of the human psyche, uncovering the hidden truths that lie beneath the surface. Diba Ratrir Kabya is a hauntingly beautiful work that challenges readers to confront their own inner demons.",
+    "genre": "Novel, Psychological Fiction",
+    "publisher": "Dey's Publishing"
+  },
+  {
+    "title": "Nishkriti",
+    "isbn": "978-81-7011-474-2",
+    "author": "Tarasankar Bandyopadhyay",
+    "publicationYear": 1940,
+    "summary": "Nishkriti, translated as Emancipation, is a powerful novel by Tarasankar Bandyopadhyay. Set in rural Bengal, the novel tells the story of Ramesh, a young man who rebels against the oppressive social norms of his time. As Ramesh struggles to break free from the shackles of tradition and prejudice, he must confront the forces that seek to hold him back. Through Ramesh's journey of self-discovery and defiance, Bandyopadhyay explores themes of freedom, identity, and the pursuit of justice. Nishkriti is a timeless classic that continues to inspire readers with its message of hope and resilience.",
+    "genre": "Novel, Social Commentary",
+    "publisher": "Publication Parishad"
+  },
+  {
+    "title": "Aranyer Din Ratri",
+    "isbn": "978-81-7177-108-9",
+    "author": "Sunil Gangopadhyay",
+    "publicationYear": 1970,
+    "summary": "Aranyer Din Ratri, or Days and Nights in the Forest, is a captivating novel by Sunil Gangopadhyay. It follows the journey of four urban youths who embark on a trip to the forests of Palamau in Bihar. As they navigate the wilderness and encounter various challenges, they are forced to confront their own fears, insecurities, and desires. Gangopadhyay's vivid descriptions and insightful characterizations make Aranyer Din Ratri a compelling read that explores themes of nature, friendship, and self-discovery.",
+    "genre": "Novel, Adventure",
+    "publisher": "Ananda Publishers"
+  },
+  {
+    "title": "Shei Samay",
+    "isbn": "978-81-7177-001-3",
+    "author": "Sunil Gangopadhyay",
+    "publicationYear": 1981,
+    "summary": "Shei Samay, translated as Those Times, is a poignant novel by Sunil Gangopadhyay. Set in colonial Bengal during the early 20th century, the novel explores the lives of a diverse cast of characters against the backdrop of social and political upheaval. Through the intertwining stories of revolutionaries, intellectuals, and ordinary people, Gangopadhyay paints a vivid picture of a society in transition. Shei Samay is a compelling read that offers a glimpse into a pivotal period in Indian history.",
+    "genre": "Novel, Historical Fiction",
+    "publisher": "Ananda Publishers"
+  },
+  {
+    "title": "Eka Ebong Koyekjon",
+    "isbn": "978-81-7177-204-8",
+    "author": "Sunil Gangopadhyay",
+    "publicationYear": 1975,
+    "summary": "Eka Ebong Koyekjon, or Alone and Some Others, is a thought-provoking novel by Sunil Gangopadhyay. It delves into the complexities of human relationships and the search for meaning in a rapidly changing world. Through the intertwined stories of various characters, Gangopadhyay explores themes of love, loss, and existential angst. The novel offers a nuanced portrayal of the human condition, challenging readers to confront their own beliefs and assumptions. Eka Ebong Koyekjon is a compelling read that lingers in the mind long after the last page is turned.",
+    "genre": "Novel, Psychological Fiction",
+    "publisher": "Ananda Publishers"
+  },
+  {
+    "title": "Raja Rammohun Roy",
+    "isbn": "978-81-7177-397-7",
+    "author": "Sunil Gangopadhyay",
+    "publicationYear": 1983,
+    "summary": "Raja Rammohun Roy is a biographical novel by Sunil Gangopadhyay that chronicles the life and times of the renowned social reformer and intellectual. Set against the backdrop of colonial India, the novel traces Rammohun Roy's journey from his early years in Bengal to his crusade for social and religious reform. Through meticulous research and vivid storytelling, Gangopadhyay brings to life the tumultuous era in which Rammohun Roy lived, capturing the spirit of an age marked by revolutionary ideas and cultural ferment. Raja Rammohun Roy is a compelling portrait of a visionary leader whose ideas continue to inspire generations.",
+    "genre": "Novel, Biographical Fiction",
+    "publisher": "Ananda Publishers"
+  },
+  {
+    "title": "Prothom Alo",
+    "isbn": "978-81-250-2203-1",
+    "author": "Sunil Gangopadhyay",
+    "publicationYear": 1986,
+    "summary": "Prothom Alo, or First Light, is a poignant novel by Sunil Gangopadhyay. It follows the journey of Swati, a young woman who must navigate the complexities of love, family, and identity in a rapidly changing world. Set in colonial Bengal during the early 20th century, the novel offers a vivid portrayal of a society in transition. Through Swati's eyes, Gangopadhyay explores the challenges and opportunities facing women in that era, shedding light on their struggles and aspirations. Prothom Alo is a compelling read that captures the essence of a pivotal period in Indian history.",
+    "genre": "Novel, Historical Fiction",
+    "publisher": "Dey's Publishing"
+  },
+  {
+    "title": "Pratidwandi",
+    "isbn": "978-81-7236-859-0",
+    "author": "Sunil Gangopadhyay",
+    "publicationYear": 1967,
+    "summary": "Pratidwandi, or The Adversary, is a powerful novel by Sunil Gangopadhyay. It tells the story of Siddhartha, a young man struggling to find his place in a rapidly changing society. Set in the turbulent political landscape of 1960s Calcutta, the novel explores themes of alienation, disillusionment, and social unrest. As Siddhartha grapples with personal and political crises, he is forced to confront the harsh realities of life in the city. Gangopadhyay's searing prose and incisive social commentary make Pratidwandi a compelling read that resonates with readers of all ages.",
+    "genre": "Novel, Political Fiction",
+    "publisher": "Ananda Publishers"
+  },
+  {
+    "title": "Kaalbela",
+    "isbn": "978-81-250-1346-3",
+    "author": "Samaresh Majumdar",
+    "publicationYear": 1983,
+    "summary": "Kaalbela, or The Time of Darkness, is a poignant novel by Samaresh Majumdar. It follows the journey of Animesh, a young man who becomes involved in the Naxalite movement in Bengal during the 1970s. Set against the backdrop of political turmoil and social unrest, the novel explores themes of idealism, revolution, and the quest for justice. As Animesh navigates the complexities of the underground resistance movement, he is forced to confront his own beliefs and values. Majumdar's evocative prose and vivid storytelling make Kaalbela a compelling read that offers insight into a turbulent period in Indian history.",
+    "genre": "Novel, Political Fiction",
+    "publisher": "Dey's Publishing"
+  },
+  {
+    "title": "Uttaradhikar",
+    "isbn": "978-81-7011-983-6",
+    "author": "Samaresh Majumdar",
+    "publicationYear": 1987,
+    "summary": "Uttaradhikar, or The Inheritance, is a gripping novel by Samaresh Majumdar. It tells the story of Debabrata, a young man who inherits a vast fortune from his estranged father. Set in the bustling metropolis of Kolkata, the novel explores themes of wealth, power, and corruption. As Debabrata navigates the treacherous waters of high society, he is forced to confront the dark secrets of his family's past. Majumdar's taut narrative and keen observations make Uttaradhikar a compelling read that offers a glimpse into the murky world of privilege and ambition.",
+    "genre": "Novel, Thriller",
+    "publisher": "Ananda Publishers"
+  },
+  {
+    "title": "Kalbela",
+    "isbn": "978-81-7436-242-7",
+    "author": "Samaresh Majumdar",
+    "publicationYear": 1994,
+    "summary": "Kalbela is a powerful novel by Samaresh Majumdar that delves into the turbulent world of the Naxalite movement in Bengal during the 1970s. The story follows the journey of Animesh, a young man who becomes involved in the revolutionary struggle for social justice. As Animesh grapples with personal and political dilemmas, he is forced to confront the harsh realities of life in a society rife with inequality and oppression. Majumdar's evocative prose and vivid characterization make Kalbela a compelling read that offers insight into a pivotal period in Indian history.",
+    "genre": "Novel, Political Fiction",
+    "publisher": "Dey's Publishing"
+  },
+  {
+    "title": "Shrikanta",
+    "isbn": "978-81-7011-474-2",
+    "author": "Sarat Chandra Chattopadhyay",
+    "publicationYear": 1917,
+    "summary": "Shrikanta is a classic novel by Sarat Chandra Chattopadhyay that follows the life of Shrikanta, a young man who embarks on a journey of self-discovery and spiritual awakening. Set against the backdrop of colonial India, the novel explores themes of love, betrayal, and social reform. As Shrikanta navigates the complexities of his relationships and grapples with his own desires and aspirations, he is forced to confront the harsh realities of life in a society torn apart by caste and class divisions. Chattopadhyay's poignant storytelling and vivid characterization make Shrikanta a timeless masterpiece that continues to resonate with readers across generations.",
+    "genre": "Novel, Historical Fiction",
+    "publisher": "Ananda Publishers"
+  },
+  {
+    "title": "Parineeta",
+    "isbn": "978-81-7011-252-6",
+    "author": "Sarat Chandra Chattopadhyay",
+    "publicationYear": 1914,
+    "summary": "Parineeta, or The Espoused, is a classic novel by Sarat Chandra Chattopadhyay that explores the complexities of love, marriage, and social conventions in colonial Bengal. The story revolves around Lalita, a young woman who is in love with Shekhar, the son of her family's wealthy neighbor. As Lalita and Shekhar navigate the intricacies of their relationship, they must contend with societal expectations and familial obligations. Chattopadhyay's nuanced portrayal of his characters and insightful commentary on the mores of his time make Parineeta a timeless classic that continues to resonate with readers.",
+    "genre": "Novel, Romance",
+    "publisher": "Ananda Publishers"
+  },
+  {
+    "title": "Dena Paona",
+    "isbn": "978-81-7011-401-8",
+    "author": "Sarat Chandra Chattopadhyay",
+    "publicationYear": 1913,
+    "summary": "Dena Paona, or Giving and Taking, is a thought-provoking novel by Sarat Chandra Chattopadhyay. Set in colonial Bengal, the novel explores themes of social inequality, injustice, and the quest for dignity. The story follows the journey of Upendra, a young man from a lower-caste background, who struggles to overcome the obstacles placed in his path by a rigid and discriminatory society. As Upendra confronts the injustices he faces, he must make difficult choices that will determine the course of his life. Chattopadhyay's powerful storytelling and keen social commentary make Dena Paona a compelling read that resonates with readers of all ages.",
+    "genre": "Novel, Social Realism",
+    "publisher": "Ananda Publishers"
+  },
+  {
+    "title": "Choritrohin",
+    "isbn": "978-81-7011-074-4",
+    "author": "Sarat Chandra Chattopadhyay",
+    "publicationYear": 1917,
+    "summary": "Choritrohin, or Characterless, is a provocative novel by Sarat Chandra Chattopadhyay that explores the complexities of human nature and the moral dilemmas faced by its characters. Set in colonial Bengal, the novel follows the lives of Kamal, Kiran, and Chandranath, whose fates become intertwined in a web of love, betrayal, and redemption. As they grapple with their own desires and aspirations, they must confront the consequences of their actions and the societal expectations that bind them. Chattopadhyay's insightful commentary and vivid characterization make Choritrohin a timeless classic that continues to resonate with readers.",
+    "genre": "Novel, Psychological Fiction",
+    "publisher": "Ananda Publishers"
+  },
+  {
+    "title": "Bipradas",
+    "isbn": "978-81-7011-462-2",
+    "author": "Sarat Chandra Chattopadhyay",
+    "publicationYear": 1914,
+    "summary": "Bipradas is a poignant novel by Sarat Chandra Chattopadhyay that tells the story of Bipradas, a young man who struggles to find his place in a rapidly changing society. Set in colonial Bengal, the novel explores themes of identity, tradition, and modernity. As Bipradas grapples with the challenges of his time, he must confront his own beliefs and values in order to forge a path forward. Chattopadhyay's vivid descriptions and empathetic portrayal of his characters make Bipradas a compelling read that offers insight into the social and cultural dynamics of early 20th century India.",
+    "genre": "Novel, Social Commentary",
+    "publisher": "Ananda Publishers"
+  },
+  {
+    "title": "Drishtidaan",
+    "isbn": "978-81-7011-624-4",
+    "author": "Sarat Chandra Chattopadhyay",
+    "publicationYear": 1918,
+    "summary": "Drishtidaan, or The Gift of Sight, is a poignant novel by Sarat Chandra Chattopadhyay that explores the transformative power of love and sacrifice. Set in colonial Bengal, the novel tells the story of Naren and Sushila, whose lives are forever changed when Naren loses his sight in a tragic accident. As they navigate the challenges of their new reality, they must confront their own fears and insecurities in order to find happiness and fulfillment. Chattopadhyay's evocative prose and vivid characterization make Drishtidaan a compelling read that tugs at the heartstrings and leaves a lasting impression.",
+    "genre": "Novel, Romance",
+    "publisher": "Ananda Publishers"
+  },
+  {
+    "title": "Pother Panchali",
+    "isbn": "978-81-7214-261-0",
+    "author": "Bibhutibhushan Bandyopadhyay",
+    "publicationYear": 1929,
+    "summary": "Pother Panchali, or Song of the Road, is a captivating novel by Bibhutibhushan Bandyopadhyay. It tells the story of Apu and Durga, two siblings growing up in rural Bengal in the early 20th century. Through their eyes, we witness the joys and sorrows of life in the countryside, from the simple pleasures of childhood to the harsh realities of poverty and loss. Bandyopadhyay's vivid descriptions and lyrical prose bring the landscape and characters to life, making Pother Panchali a timeless classic that continues to enchant readers of all ages.",
+    "genre": "Novel, Bildungsroman",
+    "publisher": "Ananda Publishers"
+  },
+  {
+    "title": "Aparajito",
+    "isbn": "978-81-250-1355-5",
+    "author": "Bibhutibhushan Bandyopadhyay",
+    "publicationYear": 1932,
+    "summary": "Aparajito, or The Unvanquished, is a compelling novel by Bibhutibhushan Bandyopadhyay. It continues the story of Apu, the protagonist of Pother Panchali, as he grows from a young boy into a young man. Set against the backdrop of colonial Bengal, the novel explores themes of family, ambition, and the pursuit of knowledge. As Apu struggles to reconcile his aspirations with his responsibilities, he must confront the challenges of adulthood and the complexities of life in a rapidly changing society. Bandyopadhyay's evocative prose and vivid characterization make Aparajito a poignant and powerful read that lingers in the mind long after the last page is turned.",
+    "genre": "Novel, Bildungsroman",
+    "publisher": "Dey's Publishing"
+  },
+  {
+    "title": "Aparichita",
+    "isbn": "978-81-7214-318-1",
+    "author": "Bibhutibhushan Bandyopadhyay",
+    "publicationYear": 1937,
+    "summary": "Aparichita, or The Unknown, is a thought-provoking novel by Bibhutibhushan Bandyopadhyay. It tells the story of Shankar, a young man who embarks on a journey of self-discovery and enlightenment. Set against the backdrop of colonial Bengal, the novel explores themes of identity, freedom, and the search for meaning. As Shankar travels through the countryside and encounters a diverse cast of characters, he is forced to confront his own beliefs and assumptions about the world. Bandyopadhyay's vivid descriptions and insightful commentary make Aparichita a compelling read that challenges readers to question the nature of reality and the purpose of life.",
+    "genre": "Novel, Philosophical Fiction",
+    "publisher": "Ananda Publishers"
+  },
+  {
+    "title": "Ichhamati",
+    "isbn": "978-81-250-2214-7",
+    "author": "Bibhutibhushan Bandyopadhyay",
+    "publicationYear": 1940,
+    "summary": "Ichhamati is a poignant novel by Bibhutibhushan Bandyopadhyay that explores the themes of love, loss, and longing. Set in colonial Bengal, the novel follows the journey of Nilambari, a young woman who embarks on a quest to find her lost love. As she travels through the countryside and encounters a diverse cast of characters, she is forced to confront her own desires and aspirations. Bandyopadhyay's lyrical prose and vivid descriptions make Ichhamati a compelling read that transports readers to a bygone era.",
+    "genre": "Novel, Romance",
+    "publisher": "Dey's Publishing"
+  },
+  {
+    "title": "Ashani Sanket",
+    "isbn": "978-81-250-1348-7",
+    "author": "Bibhutibhushan Bandyopadhyay",
+    "publicationYear": 1936,
+    "summary": "Ashani Sanket, or Distant Thunder, is a powerful novel by Bibhutibhushan Bandyopadhyay that explores the impact of the Bengal famine of 1943 on the lives of ordinary people. Set in rural Bengal, the novel follows the journey of Gangacharan, a Brahmin priest who struggles to cope with the devastation wrought by the famine. As he witnesses the suffering and despair of his fellow villagers, he is forced to confront his own privilege and complicity in the unfolding tragedy. Bandyopadhyay's evocative prose and vivid characterization make Ashani Sanket a hauntingly beautiful read that lingers in the mind long after the last page is turned.",
+    "genre": "Novel, Historical Fiction",
+    "publisher": "Ananda Publishers"
+  },
+  {
+    "title": "Meghe Dhaka Tara",
+    "isbn": "978-81-250-1350-0",
+    "author": "Shaktipada Rajguru",
+    "publicationYear": 1960,
+    "summary": "Meghe Dhaka Tara, or The Cloud-Capped Star, is a poignant novel by Shaktipada Rajguru. It tells the story of Neeta, a young woman who sacrifices her own dreams and aspirations for the sake of her family. Set against the backdrop of post-partition Bengal, the novel explores themes of sacrifice, resilience, and the quest for dignity. As Neeta struggles to keep her family together in the face of poverty and hardship, she must confront the harsh realities of life in a society torn apart by political upheaval. Rajguru's evocative prose and vivid characterization make Meghe Dhaka Tara a compelling read that tugs at the heartstrings and leaves a lasting impression.",
+    "genre": "Novel, Social Realism",
+    "publisher": "Ananda Publishers"
+  },
+  {
+    "title": "Swami",
+    "isbn": "978-81-7436-171-0",
+    "author": "Shankar",
+    "publicationYear": 1947,
+    "summary": "Swami is a heartwarming novel by Shankar that follows the journey of a young boy named Swami as he navigates the ups and downs of childhood in colonial India. Set in the fictional town of Malgudi, the novel captures the innocence and wonder of youth, as well as the challenges and complexities of growing up. Through Swami's eyes, we experience the joys of friendship, the excitement of adventure, and the pain of loss. Shankar's vivid descriptions and engaging storytelling make Swami a timeless classic that continues to enchant readers of all ages.",
+    "genre": "Novel, Coming-of-age",
+    "publisher": "Penguin Books"
+  },
+  {
+    "title": "The Golden Fortress",
+    "isbn": "978-0-141-19045-1",
+    "author": "Shankar",
+    "publicationYear": 1937,
+    "summary": "The Golden Fortress is a captivating novel by Shankar that follows the adventures of a young boy named Rama as he embarks on a quest to find the legendary golden fortress. Set in the fictional kingdom of Panchgani, the novel is filled with action, intrigue, and mystery. As Rama and his friends journey across the land in search of the fortress, they encounter danger, betrayal, and unexpected allies. Shankar's vivid imagination and engaging storytelling make The Golden Fortress a thrilling read that will delight readers of all ages.",
+    "genre": "Novel, Adventure",
+    "publisher": "Penguin Books"
+  },
+  {
+    "title": "A Shadow in Eternity",
+    "isbn": "978-0-141-31632-0",
+    "author": "Shankar",
+    "publicationYear": 1952,
+    "summary": "A Shadow in Eternity is a thought-provoking novel by Shankar that explores the themes of identity, destiny, and the nature of existence. Set in the mystical land of Nithya, the novel follows the journey of a young boy named Anand as he discovers his true potential and learns to harness the power of his inner self. As Anand grapples with the forces of darkness that threaten to engulf the world, he must confront his own fears and doubts in order to fulfill his destiny. Shankar's vivid imagery and lyrical prose make A Shadow in Eternity a compelling read that will leave a lasting impression.",
+    "genre": "Novel, Fantasy",
+    "publisher": "Penguin Books"
+  },
+  {
+    "title": "Jani Na",
+    "isbn": "978-81-250-2545-0",
+    "author": "Shankar",
+    "publicationYear": 1943,
+    "summary": "Jani Na, or I Don't Know, is a captivating novel by Shankar that explores the themes of memory, identity, and the search for truth. Set in the fictional town of Chandipur, the novel follows the journey of a young man named Satyen as he tries to uncover the secrets of his past. As Satyen delves deeper into his own memories and experiences, he discovers hidden truths that challenge his understanding of reality. Shankar's evocative prose and vivid characterization make Jani Na a compelling read that will keep readers guessing until the very end.",
+    "genre": "Novel, Mystery",
+    "publisher": "Penguin Books"
+  },
+  {
+    "title": "Devdas",
+    "isbn": "978-81-7214-286-3",
+    "author": "Sharatchandra Chattopadhyay",
+    "publicationYear": 1917,
+    "summary": "Devdas is a classic novel by Sharatchandra Chattopadhyay that tells the tragic story of Devdas, a young man who is torn apart by love and desire. Set in colonial Bengal, the novel follows Devdas as he struggles to come to terms with his unrequited love for Paro, his childhood sweetheart. As Devdas spirals into self-destructive behavior, he becomes increasingly isolated from society and estranged from his family. Chattopadhyay's poignant portrayal of Devdas's inner turmoil and external struggles make Devdas a timeless masterpiece that continues to resonate with readers across generations.",
+    "genre": "Novel, Romance",
+    "publisher": "Ananda Publishers"
+  },
+  {
+    "title": "Srikanta",
+    "isbn": "978-81-7011-064-4",
+    "author": "Sharatchandra Chattopadhyay",
+    "publicationYear": 1917,
+    "summary": "Srikanta is a thought-provoking novel by Sharatchandra Chattopadhyay that explores the themes of love, morality, and the search for meaning in life. Set in colonial Bengal, the novel follows the journey of Srikanta, a young man who embarks on a quest for spiritual enlightenment. As Srikanta travels through the countryside and encounters a diverse cast of characters, he is forced to confront his own desires and assumptions about the world. Chattopadhyay's vivid descriptions and insightful commentary make Srikanta a compelling read that challenges readers to question the nature of reality and the purpose of existence.",
+    "genre": "Novel, Philosophical Fiction",
+    "publisher": "Ananda Publishers"
+  },
+  {
+    "title": "Grihadaha",
+    "isbn": "978-81-7011-473-4",
+    "author": "Sharatchandra Chattopadhyay",
+    "publicationYear": 1920,
+    "summary": "Grihadaha, or The Burning House, is a powerful novel by Sharatchandra Chattopadhyay that explores the themes of love, betrayal, and redemption. Set in colonial Bengal, the novel tells the story of Matangini, a young woman who sacrifices her own happiness for the sake of her family. As Matangini navigates the complexities of her relationships and grapples with her own desires and aspirations, she must confront the consequences of her actions and the choices she has made. Chattopadhyay's poignant storytelling and vivid characterization make Grihadaha a compelling read that resonates with readers of all ages.",
+    "genre": "Novel, Psychological Fiction",
+    "publisher": "Ananda Publishers"
+  },
+  {
+    "title": "Dena Paona",
+    "isbn": "978-81-7436-283-0",
+    "author": "Manik Bandopadhyay",
+    "publicationYear": 1953,
+    "summary": "Dena Paona, or Giving and Taking, is a thought-provoking novel by Manik Bandopadhyay. Set in colonial Bengal, the novel explores themes of social inequality, injustice, and the quest for dignity. The story follows the journey of Upendra, a young man from a lower-caste background, who struggles to overcome the obstacles placed in his path by a rigid and discriminatory society. As Upendra confronts the injustices he faces, he must make difficult choices that will determine the course of his life. Bandopadhyay's powerful storytelling and keen social commentary make Dena Paona a compelling read that resonates with readers of all ages.",
+    "genre": "Novel, Social Realism",
+    "publisher": "Ananda Publishers"
+  },
+  {
+    "title": "Pallisamaj",
+    "isbn": "978-81-7214-292-4",
+    "author": "Manik Bandopadhyay",
+    "publicationYear": 1947,
+    "summary": "Pallisamaj, or The Village Community, is a powerful novel by Manik Bandopadhyay that explores the social and economic dynamics of rural Bengal. Set in the aftermath of the Bengal famine of 1943, the novel tells the story of a village community struggling to rebuild their lives in the face of poverty and hardship. As the villagers grapple with the challenges of survival, they must confront their own prejudices and assumptions about class and caste. Bandopadhyay's evocative prose and vivid characterization make Pallisamaj a compelling read that offers insight into the complexities of rural life in India.",
+    "genre": "Novel, Social Realism",
+    "publisher": "Ananda Publishers"
+  },
+  {
+    "title": "Putul Nacher Itikatha",
+    "isbn": "978-81-7214-130-9",
+    "author": "Manik Bandopadhyay",
+    "publicationYear": 1936,
+    "summary": "Putul Nacher Itikatha, or The Tale of the Puppet Dance, is a provocative novel by Manik Bandopadhyay that explores the themes of tradition, modernity, and the clash between rural and urban life. Set in colonial Bengal, the novel tells the story of a village community torn apart by the forces of change. As the villagers struggle to preserve their way of life in the face of industrialization and urbanization, they must confront their own fears and insecurities. Bandopadhyay's vivid descriptions and insightful commentary make Putul Nacher Itikatha a compelling read that resonates with readers of all ages.",
+    "genre": "Novel, Social Realism",
+    "publisher": "Ananda Publishers"
+  },
+  {
+    "title": "Padma Nadir Majhi",
+    "isbn": "978-81-250-1344-9",
+    "author": "Manik Bandopadhyay",
+    "publicationYear": 1936,
+    "summary": "Padma Nadir Majhi, or The Boatman of the River Padma, is a powerful novel by Manik Bandopadhyay that explores the themes of poverty, exploitation, and the struggle for survival. Set in colonial Bengal, the novel tells the story of Hossain, a boatman who ekes out a meager existence ferrying passengers across the river Padma. As Hossain navigates the treacherous waters of the river and encounters a diverse cast of characters, he must confront the harsh realities of life in a society rife with inequality and injustice. Bandopadhyay's evocative prose and vivid characterization make Padma Nadir Majhi a compelling read that offers insight into the lives of ordinary people in colonial India.",
+    "genre": "Novel, Social Realism",
+    "publisher": "Dey's Publishing"
+  },
+  {
+    "title": "Chatushkone",
+    "isbn": "978-81-250-1346-3",
+    "author": "Manik Bandopadhyay",
+    "publicationYear": 1948,
+    "summary": "Chatushkone, or Quadrangle, is a thought-provoking novel by Manik Bandopadhyay. It explores the complexities of human relationships and the moral dilemmas faced by its characters. Set in colonial Bengal, the novel follows the lives of four friends who find themselves entangled in a web of love, betrayal, and redemption. As they grapple with their own desires and aspirations, they must confront the consequences of their actions and the societal expectations that bind them. Bandopadhyay's insightful commentary and vivid characterization make Chatushkone a timeless classic that continues to resonate with readers.",
+    "genre": "Novel, Psychological Fiction",
+    "publisher": "Dey's Publishing"
+  },
+  {
+    "title": "Shesher Kobita",
+    "isbn": "978-81-250-1347-0",
+    "author": "Rabindranath Tagore",
+    "publicationYear": 1929,
+    "summary": "Shesher Kobita, or The Last Poem, is a poignant novel by Rabindranath Tagore that explores the themes of love, loss, and the passage of time. Set in colonial Bengal, the novel tells the story of Amit Ray, a young poet who falls in love with Labanya, a spirited young woman. As their relationship blossoms and matures, they must confront their own fears and insecurities in order to find happiness and fulfillment. Tagore's lyrical prose and evocative imagery make Shesher Kobita a timeless masterpiece that continues to enchant readers across generations.",
+    "genre": "Novel, Romance",
+    "publisher": "Ananda Publishers"
+  },
+  {
+    "title": "Gora",
+    "isbn": "978-81-7011-155-9",
+    "author": "Rabindranath Tagore",
+    "publicationYear": 1910,
+    "summary": "Gora is a thought-provoking novel by Rabindranath Tagore that explores the themes of identity, nationalism, and social reform. Set in colonial Bengal, the novel follows the journey of Gora, a young man who is torn between his allegiance to tradition and his desire for social change. As Gora grapples with his own beliefs and values, he must confront the contradictions and complexities of Indian society. Tagore's insightful commentary and vivid characterization make Gora a compelling read that offers insight into the cultural and political dynamics of early 20th century India.",
+    "genre": "Novel, Political Fiction",
+    "publisher": "Ananda Publishers"
+  },
+  {
+    "title": "Chokher Bali",
+    "isbn": "978-81-7214-054-8",
+    "author": "Rabindranath Tagore",
+    "publicationYear": 1903,
+    "summary": "Chokher Bali, or A Grain of Sand in the Eye, is a powerful novel by Rabindranath Tagore that explores the themes of love, betrayal, and redemption. Set in colonial Bengal, the novel tells the story of Binodini, a young widow who becomes embroiled in a complex web of relationships with three men. As Binodini navigates the intricacies of love and desire, she must confront her own desires and aspirations in order to find happiness and fulfillment. Tagore's evocative prose and vivid characterization make Chokher Bali a compelling read that resonates with readers of all ages.",
+    "genre": "Novel, Romance",
+    "publisher": "Ananda Publishers"
+  },
+  {
+    "title": "Ghare Baire",
+    "isbn": "978-81-7436-123-9",
+    "author": "Rabindranath Tagore",
+    "publicationYear": 1916,
+    "summary": "Ghare Baire, or The Home and the World, is a thought-provoking novel by Rabindranath Tagore that explores the themes of nationalism, identity, and social change. Set in colonial Bengal, the novel tells the story of Bimala, a young woman who finds herself torn between her loyalty to her husband, Nikhil, and her growing attraction to the revolutionary Sandip. As Bimala navigates the complexities of her relationships and grapples with her own desires and aspirations, she must confront the contradictions and conflicts of her time. Tagore's insightful commentary and vivid characterization make Ghare Baire a compelling read that offers insight into the cultural and political dynamics of early 20th century India.",
+    "genre": "Novel, Political Fiction",
+    "publisher": "Ananda Publishers"
+  },
+  {
+    "title": "The Home and the World",
+    "isbn": "978-0-14-044986-0",
+    "author": "Rabindranath Tagore",
+    "publicationYear": 1919,
+    "summary": "The Home and the World is a thought-provoking novel by Rabindranath Tagore that explores the themes of nationalism, identity, and social change. Set in colonial Bengal, the novel tells the story of Bimala, a young woman who finds herself torn between her loyalty to her husband, Nikhil, and her growing attraction to the revolutionary Sandip. As Bimala navigates the complexities of her relationships and grapples with her own desires and aspirations, she must confront the contradictions and conflicts of her time. Tagore's insightful commentary and vivid characterization make The Home and the World a compelling read that offers insight into the cultural and political dynamics of early 20th century India.",
+    "genre": "Novel, Political Fiction",
+    "publisher": "Penguin Books"
+  },
+  {
+    "title": "Ghare Baire",
+    "isbn": "978-81-7011-219-8",
+    "author": "Rabindranath Tagore",
+    "publicationYear": 1916,
+    "summary": "Ghare Baire, or The Home and the World, is a thought-provoking novel by Rabindranath Tagore that explores the themes of nationalism, identity, and social change. Set in colonial Bengal, the novel tells the story of Bimala, a young woman who finds herself torn between her loyalty to her husband, Nikhil, and her growing attraction to the revolutionary Sandip. As Bimala navigates the complexities of her relationships and grapples with her own desires and aspirations, she must confront the contradictions and conflicts of her time. Tagore's insightful commentary and vivid characterization make Ghare Baire a compelling read that offers insight into the cultural and political dynamics of early 20th century India.",
+    "genre": "Novel, Political Fiction",
+    "publisher": "Ananda Publishers"
+  },
+  {
+    "title": "Gora",
+    "isbn": "978-81-7011-285-3",
+    "author": "Rabindranath Tagore",
+    "publicationYear": 1910,
+    "summary": "Gora is a thought-provoking novel by Rabindranath Tagore that explores the themes of identity, nationalism, and social reform. Set in colonial Bengal, the novel follows the journey of Gora, a young man who is torn between his allegiance to tradition and his desire for social change. As Gora grapples with his own beliefs and values, he must confront the contradictions and complexities of Indian society. Tagore's insightful commentary and vivid characterization make Gora a compelling read that offers insight into the cultural and political dynamics of early 20th century India.",
+    "genre": "Novel, Political Fiction",
+    "publisher": "Ananda Publishers"
+  },
+  {
+    "title": "Chokher Bali",
+    "isbn": "978-81-7011-252-6",
+    "author": "Rabindranath Tagore",
+    "publicationYear": 1903,
+    "summary": "Chokher Bali, or A Grain of Sand in the Eye, is a powerful novel by Rabindranath Tagore that explores the themes of love, betrayal, and redemption. Set in colonial Bengal, the novel tells the story of Binodini, a young widow who becomes embroiled in a complex web of relationships with three men. As Binodini navigates the intricacies of love and desire, she must confront her own desires and aspirations in order to find happiness and fulfillment. Tagore's evocative prose and vivid characterization make Chokher Bali a compelling read that resonates with readers of all ages.",
+    "genre": "Novel, Romance",
+    "publisher": "Ananda Publishers"
+  },
+  {
+    "title": "Noukadubi",
+    "isbn": "978-81-7011-252-6",
+    "author": "Rabindranath Tagore",
+    "publicationYear": 1906,
+    "summary": "Noukadubi, or The Wreck, is a poignant novel by Rabindranath Tagore that explores the themes of love, loss, and redemption. Set in colonial Bengal, the novel tells the story of Ramesh, a young man who finds himself adrift in a sea of uncertainty after surviving a shipwreck. As Ramesh struggles to rebuild his life and come to terms with his past, he must confront his own fears and insecurities in order to find happiness and fulfillment. Tagore's evocative prose and vivid characterization make Noukadubi a compelling read that resonates with readers of all ages.",
+    "genre": "Novel, Romance",
+    "publisher": "Ananda Publishers"
+  },
+  {
+    "title": "Shesher Kobita",
+    "isbn": "978-81-7011-285-3",
+    "author": "Rabindranath Tagore",
+    "publicationYear": 1929,
+    "summary": "Shesher Kobita, or The Last Poem, is a poignant novel by Rabindranath Tagore that explores the themes of love, loss, and the passage of time. Set in colonial Bengal, the novel tells the story of Amit Ray, a young poet who falls in love with Labanya, a spirited young woman. As their relationship blossoms and matures, they must confront their own fears and insecurities in order to find happiness and fulfillment. Tagore's lyrical prose and evocative imagery make Shesher Kobita a timeless masterpiece that continues to enchant readers across generations.",
+    "genre": "Novel, Romance",
+    "publisher": "Ananda Publishers"
+  },
+  {
+    "title": "Noukadubi",
+    "isbn": "978-81-7214-131-6",
+    "author": "Rabindranath Tagore",
+    "publicationYear": 1906,
+    "summary": "Noukadubi, or The Wreck, is a poignant novel by Rabindranath Tagore that explores the themes of love, loss, and redemption. Set in colonial Bengal, the novel tells the story of Ramesh, a young man who finds himself adrift in a sea of uncertainty after surviving a shipwreck. As Ramesh struggles to rebuild his life and come to terms with his past, he must confront his own fears and insecurities in order to find happiness and fulfillment. Tagore's evocative prose and vivid characterization make Noukadubi a compelling read that resonates with readers of all ages.",
+    "genre": "Novel, Romance",
+    "publisher": "Ananda Publishers"
+  },
+  {
+    "title": "Srikanta",
+    "isbn": "978-81-7011-284-6",
+    "author": "Sarat Chandra Chattopadhyay",
+    "publicationYear": 1917,
+    "summary": "Srikanta is a thought-provoking novel by Sarat Chandra Chattopadhyay that explores the themes of love, morality, and the search for meaning in life. Set in colonial Bengal, the novel follows the journey of Srikanta, a young man who embarks on a quest for spiritual enlightenment. As Srikanta travels through the countryside and encounters a diverse cast of characters, he is forced to confront his own desires and assumptions about the world. Chattopadhyay's vivid descriptions and insightful commentary make Srikanta a compelling read that challenges readers to question the nature of reality and the purpose of existence.",
+    "genre": "Novel, Philosophical Fiction",
+    "publisher": "Ananda Publishers"
+  },
+  {
+    "title": "Devi Choudhurani",
+    "isbn": "978-81-7436-124-6",
+    "author": "Bankim Chandra Chattopadhyay",
+    "publicationYear": 1884,
+    "summary": "Devi Choudhurani is a gripping novel by Bankim Chandra Chattopadhyay that tells the story of Devi, a fearless and independent woman who rises up against British colonial rule in India. Set in the backdrop of the Sannyasi Rebellion of the late 18th century, the novel follows Devi as she leads a band of rebels in their fight for freedom. As Devi navigates the complexities of war and politics, she must confront her own fears and insecurities in order to fulfill her destiny. Chattopadhyay's vivid descriptions and engaging storytelling make Devi Choudhurani a compelling read that resonates with readers of all ages.",
+    "genre": "Novel, Historical Fiction",
+    "publisher": "Ananda Publishers"
+  },
+  {
+    "title": "Anandamath",
+    "isbn": "978-81-7436-125-3",
+    "author": "Bankim Chandra Chattopadhyay",
+    "publicationYear": 1882,
+    "summary": "Anandamath is a thought-provoking novel by Bankim Chandra Chattopadhyay that explores the themes of patriotism, sacrifice, and the quest for freedom. Set in colonial Bengal during the Bengal famine of 1770, the novel tells the story of a group of monks who form an armed resistance movement against British colonial rule. As the monks fight for their freedom and independence, they must confront their own beliefs and values in order to achieve their goals. Chattopadhyay's evocative prose and vivid characterization make Anandamath a compelling read that offers insight into the struggle for independence in colonial India.",
+    "genre": "Novel, Political Fiction",
+    "publisher": "Ananda Publishers"
+  },
+  {
+    "title": "Kapalkundala",
+    "isbn": "978-81-7011-095-8",
+    "author": "Bankim Chandra Chattopadhyay",
+    "publicationYear": 1866,
+    "summary": "Kapalkundala is a captivating novel by Bankim Chandra Chattopadhyay that tells the story of Kapalkundala, a young woman who finds herself torn between love and duty. Set in colonial Bengal, the novel follows Kapalkundala as she navigates the complexities of her relationships with Nabakumar, a young man from a wealthy family, and Nabakumar's father, the wealthy landlord Nabakumar. As Kapalkundala struggles to reconcile her own desires with the expectations of society, she must confront the consequences of her choices and the impact they have on those around her. Chattopadhyay's vivid descriptions and engaging storytelling make Kapalkundala a timeless classic that continues to resonate with readers of all ages.",
+    "genre": "Novel, Romance",
+    "publisher": "Ananda Publishers"
   }
 ]

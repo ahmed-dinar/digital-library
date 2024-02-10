@@ -7,8 +7,8 @@
         - Nest has built-in support for typescript and modular architecture that makes it easy to organize and scale
           large
           applications.
-        - Nest has built-in support for dependency injection (DI), validation, microservices, monolith etc that can
-          help to test, maintain code out of the box.
+        - Nest has built-in support for dependency injection (DI), validation, microservices, monolith, rate limiter,
+          documentation etc that can help to test, maintain code out of the box to production quality.
     - Prisma (ORM)
         - Prisma has type-safety by generating typing in typescript, built-in migrations etc.
     - Jest (Test)
@@ -109,9 +109,16 @@ To seed the database with some demo book records:
     - Add logging to both server and frontend, we can track any errors and perform troubleshooting in production.
     - We could use tools like Sentry (error tracker), Hotjar, analytics (Google analytics etc) in frontend to track real
       time monitoring.
-    - We could use GCP, AWS or other logs service in backend ot monitor incident real time.
+    - We could use GCP, AWS or other logs service in backend to monitor incident real time.
 
 ## Further Improvements
+
+- ### Development improvements
+    - Add more logs in book add/remove/update services to track who/when/what is modifying.
+    - Add more comments on code where necessary.
+    - Add API documentation tool (E.g swagger) to maintain auto document backend APIs.
+    - Generate and share a postman API collection.
+    - Improve UX in modifying author and genres, in search book option by multiple fields, more sort functionalities.
 
 - ### Frontend testing
     - We should add frontend unit and e2e testing to make the UI UX quality better and consistent.
@@ -141,6 +148,7 @@ To seed the database with some demo book records:
     - Like, comment, rating on books can improve interest of users.
     - Introduce audio book supports to listen to the book.
     - A pdf/ebook reading experience built int in the app.
+    - We could have a home page section with top/popular/new books.
 
 ## Current Database Design
 

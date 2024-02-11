@@ -6,25 +6,25 @@
 
 Backend and frontend is hosted on [Vercel](https://vercel.com)
 using [Github Actions](https://github.com/ahmed-dinar/digital-library/actions).
-Database (PostgreSQL) is hosted on [Neon](https://neon.tech). As these are in free tier, demo might be a little bit slow.
+Database (PostgreSQL) is hosted on [Neon](https://neon.tech). As these are in free tier, demo might be a little bit
+slow.
 
 ## Technology Stack
 
 - #### Backend
     - NestJS
-        - Nest has built-in support for typescript and modular architecture that makes it easy to organize and scale
-          large
-          applications.
-        - Nest has built-in support for dependency injection (DI), validation, microservices, monolith, rate limiter,
-          documentation etc that can help to test, maintain code out of the box to production quality.
+        - Nest has built-in support for TypeScript and a modular architecture, making it easy to organize and scale
+          large applications.
+        - Nest provides built-in support for dependency injection (DI), validation, microservices, monolith, rate
+          limiter, documentation, etc., which can help maintain code out of the box to production quality.
     - Prisma (ORM)
-        - Prisma has type-safety by generating typing in typescript, built-in migrations etc.
+        - Prisma ensures type-safety by generating typings in TypeScript and includes built-in migrations.
     - Jest (Test)
 
 - #### Frontend
     - Next.js
-        - Next is a React framwork supports server-side rendering (SSR), filter based routing, server components which
-          simplifies the development process, optimizes performance, SEO etc.
+        - React framework supports server-side rendering (SSR), filter-based routing and server
+          components. It simplifies the development process, optimizes performance and enhances SEO.
     - Ant Design
     - Tailwind CSS
         - An easy to use CSS utility helps to design website using predefined building blocks.
@@ -32,8 +32,8 @@ Database (PostgreSQL) is hosted on [Neon](https://neon.tech). As these are in fr
 - #### Database
     - PostgreSQL 15
         - Considering the requirements of the digital library, book records with fixed fields (title, summary, author
-          etc), a SQL database likely be a suitable choice.
-        - SQL provide transaction support, and strong consistency with ACID property which is required for book record
+          etc), a SQL database is likely the most suitable choice.
+        - SQL provide transaction support, strong consistency with ACID property which is required for book record
           integrity.
         - SQL can perform complex Queries which is required to retrieve data from book, author, genre etc entries.
 
@@ -41,14 +41,16 @@ Database (PostgreSQL) is hosted on [Neon](https://neon.tech). As these are in fr
     - Github Actions (CI/CD)
     - Docker (local run)
 
-## Running the dockerize app
+## Running the dockerized app
 
 > [!NOTE]
-> Make sure you have [docker](https://www.docker.com/) and [docker compose](https://docs.docker.com/compose/) installed
+> Please ensure that you have [docker](https://www.docker.com/) and [docker compose](https://docs.docker.com/compose/)
+> installed
 > in your machine.
 > Docker compose version should be >= 2.2
 
-There are three docker containers needed to run the app. One for backend, one for frontend and another for database.
+To run the app, three Docker containers are required: one for the backend, one for the frontend, and another for the
+database.
 
 ```bash
 # Clone the code to your local machine
@@ -64,7 +66,7 @@ $ docker-compose up -d
 $ docker-compose logs -f
 ```
 
-## Use the app
+## Using the app
 
 * [Frontend](http://localhost:8080) is running on port [http://localhost:8080](http://localhost:8080).
 * [Backend](http://localhost:3000) is running on port [http://localhost:3000](http://localhost:3000).
@@ -74,7 +76,7 @@ $ docker-compose logs -f
 To seed the database with some demo book records:
 
 * Go to [http://localhost:8080/backdoor](https://lib.dinar.sh/backdoor)
-* Click the desired button to seed and clear seed as attached screenshot below.
+* Click the appropriate button to seed or clear the seed, as shown in the attached screenshot below.
 
 ![Seed database](docs/seed.png)
 
@@ -103,9 +105,11 @@ To seed the database with some demo book records:
     - We could add indexing on frequent used columns, E.g. book title, book summary (text search), author and genre
       name (search)
     - As the request grow, we could have database replicas. E.g. read and write replica
-    - As the database grow, we could partition (Sharding) database into multiple shards.
-    - We could have database cache to cache book entries as the read is more expected than write operations.
-    - If we need to serve media files (book images, audio etc), we could use a object stores
+    - Partition the database into multiple shards as it grows to distribute data across multiple servers and improve
+      query performance.
+    - Utilize database caching to cache frequently accessed book entries, as reads are more common than write
+      operations, to reduce query latency.
+    - If we need to serve media files (book images, audio etc), we could use a object store (E.g. AWS S3).
     - Database backup can help to recovery of any data loss.
 
 - ### Frontend Optimization
@@ -148,7 +152,7 @@ To seed the database with some demo book records:
     - Features like add a book to favourite, track reading progress, add to user collections can help user to find the
       app more useful.
     - Suggested books based on user interaction and reading history can improve UX better.
-    - A socializing feature like an user can add other user as a friend and see/share their interests among friends.
+    - A socializing feature like an user can add other user as a friend and see/share their interests.
 
 - ### Additional features
     - Information validation based on user votes (genres attached to book, author etc) can help the reliability of

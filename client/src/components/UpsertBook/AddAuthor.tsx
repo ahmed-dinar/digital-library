@@ -39,7 +39,6 @@ const AddAuthor: FC<PropType> = ({authors, value, setValue}) => {
 
       if (createdAuthor?.id && createdAuthor?.name) {
         setValue([
-          ...value,
           {
             label: createdAuthor.name,
             value: createdAuthor.id
@@ -57,7 +56,7 @@ const AddAuthor: FC<PropType> = ({authors, value, setValue}) => {
       console.log(err);
       messageApi.open({
         type: 'error',
-        content: err?.response?.data?.message || 'Something went wrong creating book!',
+        content: err?.response?.data?.message || 'Something went wrong creating author!',
       });
     }
 

@@ -1,5 +1,13 @@
 # Simple Digital Library
 
+## Live Demo
+
+##### A live demo is available at **[https://lib.dinar.sh](https://lib.dinar.sh)**.
+
+Backend and frontend is hosted on [Vercel](https://vercel.com)
+using [Github Actions](https://github.com/ahmed-dinar/digital-library/actions).
+Database (PostgreSQL) is hosted on [Neon](https://neon.tech). As these are in free tier, demo might be a little bit slow.
+
 ## Technology Stack
 
 - #### Backend

@@ -126,11 +126,42 @@ export class BookRepository {
   ): Promise<{ items: BookWithRelations[]; count: number }> {
     const where: Prisma.BookWhereInput = {};
 
-    if (filterDto?.title) {
-      where.title = {
-        contains: filterDto.title,
-        mode: 'insensitive',
-      };
+    // Title summary or author name should be or logic
+    if (filterDto?.title || filterDto?.summary || filterDto?.author) {
+      where.OR = [];
+
+      if (filterDto?.title) {
+        where.OR.push({
+          title: {
+            contains: filterDto.title,
+            mode: 'insensitive',
+          },
+        });
+      }
+
+      if (filterDto?.summary) {
+        where.OR.push({
+          summary: {
+            contains: filterDto.summary,
+            mode: 'insensitive',
+          },
+        });
+      }
+
+      if (filterDto?.author) {
+        where.OR.push({
+          authors: {
+            some: {
+              author: {
+                name: {
+                  contains: filterDto.author,
+                  mode: 'insensitive',
+                },
+              },
+            },
+          },
+        });
+      }
     }
 
     if (filterDto?.publisher) {
@@ -159,17 +190,7 @@ export class BookRepository {
       };
     }
 
-    if (filterDto?.author) {
-      where.authors = {
-        some: {
-          author: {
-            name: {
-              startsWith: filterDto.author,
-            },
-          },
-        },
-      };
-    } else if (filterDto?.authorId) {
+    if (filterDto?.authorId) {
       const authorIds = filterDto?.authorId
         .split(',')
         .map((id) => parseInt(id));
@@ -191,6 +212,7 @@ export class BookRepository {
           genre: {
             name: {
               startsWith: filterDto.genre,
+              mode: 'insensitive',
             },
           },
         },

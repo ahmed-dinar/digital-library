@@ -20,6 +20,10 @@ export class BookFilterDto {
 
   @IsString()
   @IsOptional()
+  summary?: string;
+
+  @IsString()
+  @IsOptional()
   isbn?: string;
 
   @IsString()

@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-    <body className={poppinsFont.variable}>
+    <body className={poppinsFont.variable + ' bg-white'}>
     <AntdRegistry>
       <ConfigProvider
         theme={{

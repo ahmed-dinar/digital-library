@@ -35,10 +35,21 @@ const AddGenre: FC<PropType> = ({genres, value, setValue}) => {
     setLoading(true);
 
     try {
-      await createGenre({name});
+      const createdGenre = await createGenre({name});
+
+      if (createdGenre?.id && createdGenre?.name) {
+        setValue([
+          ...value,
+          {
+            label: createdGenre.name,
+            value: createdGenre.id
+          }
+        ]);
+      }
+
       messageApi.open({
         type: 'success',
-        content: 'Author added!',
+        content: 'Genre added!',
       });
       setName('');
       fetchGenres();

@@ -35,7 +35,18 @@ const AddAuthor: FC<PropType> = ({authors, value, setValue}) => {
     setLoading(true);
 
     try {
-      await createAuthor({name});
+      const createdAuthor = await createAuthor({name});
+
+      if (createdAuthor?.id && createdAuthor?.name) {
+        setValue([
+          ...value,
+          {
+            label: createdAuthor.name,
+            value: createdAuthor.id
+          }
+        ]);
+      }
+
       messageApi.open({
         type: 'success',
         content: 'Author added!',

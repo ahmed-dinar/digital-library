@@ -22,6 +22,7 @@ export enum BookQueryType {
  */
 export const BookQueryKey: { [k: string]: BookQueryType } = {
   title: BookQueryType.FILTER,
+  summary: BookQueryType.FILTER,
   isbn: BookQueryType.FILTER,
   author: BookQueryType.FILTER,
   authorId: BookQueryType.FILTER,

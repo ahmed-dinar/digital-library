@@ -175,6 +175,9 @@ To seed the database with some demo book records:
 
 ## Development
 
+> [!NOTE]
+> Please ensure that you have node >= 18.17.0 or higher installed.
+
 ### Please find the development guides in [server](/server) and [client](/client) directory readme.
 
 ## License

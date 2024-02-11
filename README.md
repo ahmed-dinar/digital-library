@@ -75,7 +75,7 @@ $ docker-compose logs -f
 
 To seed the database with some demo book records:
 
-* Go to [http://localhost:8080/backdoor](https://lib.dinar.sh/backdoor)
+* Go to [http://localhost:8080/backdoor](http://localhost:8080/backdoor)
 * Click the appropriate button to seed or clear the seed, as shown in the attached screenshot below.
 
 ![Seed database](docs/seed.png)

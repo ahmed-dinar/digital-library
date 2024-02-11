@@ -39,7 +39,6 @@ const AddGenre: FC<PropType> = ({genres, value, setValue}) => {
 
       if (createdGenre?.id && createdGenre?.name) {
         setValue([
-          ...value,
           {
             label: createdGenre.name,
             value: createdGenre.id
@@ -57,7 +56,7 @@ const AddGenre: FC<PropType> = ({genres, value, setValue}) => {
       console.log(err);
       messageApi.open({
         type: 'error',
-        content: err?.response?.data?.message || 'Something went wrong creating book!',
+        content: err?.response?.data?.message || 'Something went wrong creating genre!',
       });
     }
 
